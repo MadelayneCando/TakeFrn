@@ -56,8 +56,8 @@ export class LoginComponent {
     localStorage.setItem('idtipo', response.data.usuario.idtipo);
     localStorage.setItem('idusuario', response.data.usuario.idusuario);
     localStorage.setItem('bandera', "true");
-    //window.location.href='/perfil';
-    this.router.navigate(['/perfil']);
+    window.location.href='/perfil';
+    // this.router.navigate(['/perfil']);
     console.log("Exito");
     })
     .catch(error=>{console.error('Error al iniciar sesion', error)
