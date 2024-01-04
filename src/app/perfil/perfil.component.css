@@ -297,6 +297,5 @@ body, .modal{
 
 .botonesperfil button { 
     width: 100%;
-    margin-left: 150px; /* Añade un espacio entre los botones */
     font-weight: bold; /* Agrega negrita al texto */
 }
