@@ -60,6 +60,13 @@ export class BackendService {
       });
   }
 
+  verificarClase(p_identrenamiento: number, p_cla_fecha:string){
+    return this.http.post(`${this.backendUrl}/api/verificarClase`,{
+      p_identrenamiento: p_identrenamiento, 
+      p_cla_fecha: p_cla_fecha
+    }); 
+  }
+
   verUsuario(idclase: number): Observable<any[]> {
     return new Observable<any[]>((observer) => {
       axios
@@ -140,12 +147,7 @@ export class BackendService {
     });
   }  
 
-  verificarClase(identramiento: number, fecha:string){
-    return this.http.post(`${this.backendUrl}/api/verificarClase`,{
-      identrenamiento: identramiento, 
-      cla_fecha: fecha
-    }); 
-  }
+
 
   comprarCreditos(idusuario:number, idcredito:number){
     return this.http.post(`${this.backendUrl}/api/comprarCreditos`, {      
