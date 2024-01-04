@@ -14,7 +14,7 @@
       <ng-container *ngIf="bandera; else login">
         <a class="btn-inicio" (click)="toggleDropdown()"> {{nombre}} </a>
         <div class="dropdown-content" [ngClass]="{'show': dropdownVisible}">
-          <a routerLink="/perfil" (click)="cerrarMenu()">Perfil</a>
+          <a  (click)="cerrarMenu()">Perfil</a>
           <a (click)="cerrarSesion()">Cerrar Sesión</a>
         </div>
       </ng-container>

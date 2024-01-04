@@ -20,6 +20,7 @@ export class NavbarComponent {
 
   cerrarMenu() {
     this.menuAbierto = false;
+    this.router.navigate(['/perfil']);
   }
 
   constructor(private router: Router){}
