@@ -2,6 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import axios from 'axios';
 import Swal from 'sweetalert2';  
 import { remota } from 'src/conexion';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -31,7 +32,7 @@ export class LoginComponent {
   mostrarPag=true;
 
 
-  constructor( ){}
+  constructor(private router:Router){}
 
   inicioSesion(){
     console.log("...");
@@ -55,7 +56,8 @@ export class LoginComponent {
     localStorage.setItem('idtipo', response.data.usuario.idtipo);
     localStorage.setItem('idusuario', response.data.usuario.idusuario);
     localStorage.setItem('bandera', "true");
-    window.location.href='/perfil';
+    //window.location.href='/perfil';
+    this.router.navigate(['/perfil']);
     console.log("Exito");
     })
     .catch(error=>{console.error('Error al iniciar sesion', error)
