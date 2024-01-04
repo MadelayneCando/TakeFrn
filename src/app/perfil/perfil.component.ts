@@ -102,7 +102,7 @@ export class PerfilComponent {
 
   limpiarLocal() {
     localStorage.clear();
-    window.location.href = "/login";
+    this.router.navigate(['/login']);
   }
 
   toggleEditing() {
