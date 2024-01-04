@@ -57,10 +57,7 @@ export class LoginComponent {
     localStorage.setItem('idusuario', response.data.usuario.idusuario);
     localStorage.setItem('bandera', "true");
     //window.location.href='/perfil';
-    const currentUrl = this.router.url; // Obtener la URL actual
-    this.router.navigateByUrl('/perfil', { skipLocationChange: true }).then(() => {
-    this.router.navigate([currentUrl]); // Navegar a la URL actual para recargar la página
-  });
+    this.router.navigate(['/perfil']);
     console.log("Exito");
     })
     .catch(error=>{console.error('Error al iniciar sesion', error)

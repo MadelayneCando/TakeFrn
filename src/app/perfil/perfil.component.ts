@@ -102,10 +102,7 @@ export class PerfilComponent {
 
   limpiarLocal() {
     localStorage.clear();
-    const currentUrl = this.router.url; // Obtener la URL actual
-    this.router.navigateByUrl('/login', { skipLocationChange: true }).then(() => {
-    this.router.navigate([currentUrl]); // Navegar a la URL actual para recargar la página
-  });
+    this.router.navigate(['/login']);
   }
 
   toggleEditing() {
