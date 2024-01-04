@@ -1,6 +1,6 @@
 <section class="citas">
     <!-- FUNCIONA CON BOTON MOSTRAR CITA -->
-    <div class="container"> <!-- MODIFCA MADE  *ngIf="bandera" -->
+    <div class="container"> <!-- MODIFCA MADE  * ngIf="bandera" -->
         <div class="main">
             <h2 id="u">U</h2>
             <h2>suarios</h2>
@@ -18,7 +18,7 @@
             <tbody>
                 <tr *ngFor="let usu of usuarios">
                     <td>{{usu.nombre_completo}} </td>
-                    <td>{{usu.nombre_entrenammiento}} </td>
+                    <td>{{usu.nombre_entrenamiento}} </td>
                     <td>{{usu.hora_clase}} </td>
                     <td>{{usu.fecha_clase | date:'yyyy-MM-dd' }} </td>
                 </tr>

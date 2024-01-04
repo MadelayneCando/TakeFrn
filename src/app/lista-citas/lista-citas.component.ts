@@ -17,7 +17,7 @@ export class ListaCitasComponent {
 
   constructor(private injector:Injector){  }
 
-  ngOnInit(){
+  ngOnInit(){ 
     this.obtenerEntrenamientos();
     if(this.user_email){
       this.verUsuarioPorClase(this.user_email);
