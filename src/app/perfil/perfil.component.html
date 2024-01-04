@@ -53,15 +53,10 @@
             </div>
         </div>
 
-
-
-
-
         <div *ngIf="!mostrarPerfil">
             <app-cita *ngIf="mostrarFormularioAgendarCita"></app-cita> <!-- ESTOY CAMBIANDO ESTO - MD -->
             <app-lista-citas *ngIf="mostrarFormularioMostrarCita"></app-lista-citas> <!-- ESTOY CAMBIANDO ESTO - MD -->
         </div>
-        <button class="btn price_btn" (click)="limpiarLocal()">CERRAR SESION</button>
     </div>
 
 
