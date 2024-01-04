@@ -1,0 +1,186 @@
+.categorias{
+    background-color: #152b3c;
+}
+.main{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.main h2{
+    font-size: 35px;
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    display: inline-block;
+    color: black;
+}
+
+span{
+    color: brown;
+}
+
+.main h2::before{
+    position: absolute;
+    content: '';
+    background: brown;
+    height: 3px;
+    width: 30%;
+    right: -15px;
+    bottom: 0;
+    border-radius: 50px;
+
+}
+p{
+    color: aliceblue;
+}
+.main h6{
+    margin-top: 10px;
+    font-size: 30px;
+    font-size: sans-serif;
+    font-weight: lighter;
+    color: aliceblue;
+
+}
+
+.categorias .content{
+    flex-wrap: wrap;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.categorias .content .frame{
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    margin: 10px;
+    background: #222;
+    box-shadow: 0 10px 15px rgb(0,0,0,0.5);
+    flex: 0 0 calc(33.33% - 20px);
+}
+
+.categorias .content .frame .box{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+.categorias .content .frame .box img{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+    transition: 0.2s ease-in;
+}
+
+.categorias .content .frame .box:hover img{
+    filter: brightness(100%);
+    transform: scale(1.08);    
+}
+
+.categorias .content .frame .title{
+    color: brown;
+    padding: 5px 0;
+}
+
+.categorias .content .frame p{
+    font-size: 0.8em;
+
+}
+
+
+
+
+/*coach*/
+
+
+.blog-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #152b3c
+  }
+  .card-body {
+    
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: sans-serif;
+    color: azure;
+   
+  }
+  .card-container {
+    flex: 0 0 calc(40.33% - 20px);
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease; 
+    
+
+   
+  }
+
+  .card-container:hover {
+    transform: scale(1.05); 
+  }
+  
+
+
+  .card {
+    border: 1px solid #222;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0 10px 15px rgb(0,0,0,0.5);
+    
+  }
+  
+  .img-fluid {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    height: 350px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: brown;
+  }
+ 
+
+  .text-muted {
+    color: #3b3b3b; 
+  }
+  
+
+  @media screen and (max-width: 769px) {
+    
+    .categorias .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .categorias .content .frame {
+      width: 100%;
+      box-sizing: border-box;
+      margin: 10px 0; /* Ajusta el margen según sea necesario */
+  }
+  
+
+  .blog-1 .card-container {
+      flex: 0 0 calc(100% - 20px); /* Cambiar el ancho a 100% para una columna en pantallas más pequeñas */
+  }
+
+  
+}

@@ -1,0 +1,36 @@
+<section id="categorias" class="categorias view">
+    <div class="main">
+        <h2><span>C</span>ategorias</h2>
+    <h6>El cuerpo alcanza lo que la mente cree.</h6>
+    </div>
+    <div class="content" >
+        <div class="frame" *ngFor="let ent of entrenamientos">
+            <div class="box">
+                <img [src]='ent.ent_foto' alt="">
+            </div>
+            <div class="title"> {{ent.ent_nombre}} </div>
+            <p> {{ent.ent_descripcion}} </p>
+        </div>      
+        
+    </div>
+    <div class="main">
+        <h2><span>I</span>nstructores</h2>
+        <h6>No te rindas.</h6>
+    </div >
+    <div class="blog-1">
+        <div class="card-container" *ngFor="let inst of instructores" data-aos="flip-left" data-aos-delay="100"
+        data-aos-duration="1000">
+        <div class="card">       
+                <img [src]="inst.en_foto" class="img-fluid rounded-start" [alt]="inst.en_nombre">         
+                <div class="card-body">
+                    <h3 class="card-title">{{inst.en_nombre}} {{inst.en_apellido}}</h3>
+                    <p><small class="text-muted">{{inst.en_descripcion}}</small></p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

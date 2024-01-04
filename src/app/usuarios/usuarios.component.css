@@ -1,0 +1,131 @@
+.main{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.main h2{
+    font-size: 35px;
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    display: inline-block;
+    color: black;
+}
+.main h6{
+    color: black;
+}
+
+span{
+    color: brown;
+}
+
+.main h2::before{
+    position: absolute;
+    content: '';
+    background: brown;
+    height: 3px;
+    width: 30%;
+    right: -15px;
+    bottom: 0;
+    border-radius: 50px;
+
+}
+
+#miTabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#miTabla th {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#miTabla tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#miTabla tr:nth-child(odd) {
+    background-color: white;
+}
+
+#miTabla td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#miTabla button {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    /* margin-right: 5px; */
+    margin-top: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#miTabla button:hover {
+    background-color: rgb(110, 30, 30);
+}
+
+
+/* Estilos para el contenedor principal */
+.login-records-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* Estilos para las celdas de encabezado */
+th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilos para las filas impares */
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para las celdas */
+td {
+    padding: 8px;
+}
+
+/* agregado */
+body{
+    background-color: #152b3c;
+}
+
+.price_btn{
+    color: brown;
+    background-color: rgb(135, 48, 48);
+    border: 2px solid rgb(135, 48, 48);
+    height: 50px;
+    margin-bottom: 10px;
+    margin-right: 30px; 
+    width: 150px;
+    color: white;
+    
+  }
+  
+  .price_btn:hover{
+    color: #ffffff;
+    background-color: rgb(119, 52, 52);
+  }

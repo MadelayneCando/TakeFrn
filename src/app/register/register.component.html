@@ -1,0 +1,77 @@
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <div class="container">
+        <div class="registration form">
+            <header>Registrate</header>
+            <form id="registroForm" action="#" (submit)="enviarFormulario()" method="POST">
+                <input type="text" id="cedula" name="cedula" placeholder="Cedula" [(ngModel)]="user_cedula"
+                    (input)="validateCedula()" [ngClass]="{'invalid': !cedulaValid}" required>
+                <div class="error-message" *ngIf="!cedulaValid">{{ cedulaErrorMessage }}</div>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" [(ngModel)]="user_nombre"
+                    (input)="validarCampo('nombre')" [ngClass]="{'invalid': !nombreValid}" required>
+                <div class="error-message2" *ngIf="!nombreValid">El nombre es obligatorio.</div>
+
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido" [(ngModel)]="user_apellido"
+                    (input)="validarCampo('apellido')" [ngClass]="{'invalid': !apellidoValid}" required>
+                <div class="error-message" *ngIf="!apellidoValid">El apellido es obligatorio.</div>
+
+                <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo" [(ngModel)]="user_correo"
+                    (input)="validateEmail()" [ngClass]="{'invalid': !correoValid}" required>
+                <div class="error-message2" *ngIf="!correoValid">{{ correoErrorMessage }}</div>
+
+                <input type="text" id="telefono" name="telefono" placeholder="Telefono" [(ngModel)]="user_telefono"
+                    (input)="validateTelefono()" [ngClass]="{'invalid': !telefonoValid}" required>
+                <div class="error-message" *ngIf="!telefonoValid">{{ telefonoErrorMessage }}</div>
+
+                <input type="text" id="direccion" name="direccion" placeholder="Direccion" [(ngModel)]="user_direccion"
+                    (input)="validarCampo('direccion')" [ngClass]="{'invalid': !direccionValid}" required>
+                <div class="error-message2" *ngIf="!direccionValid">La dirección es obligatoria.</div>
+
+                <input type="number" id="peso" name="peso" placeholder="Peso(Kg)" (blur)="setVacio('peso')" required>
+
+                <input type="number" id="altura" name="altura" placeholder="Altura" (blur)="setVacio('altura')"
+                    required>
+
+                <input [type]="showPassword ? 'text' : 'password'" id="password" name="password"
+                    placeholder="Crea la contraseña" [(ngModel)]="user_password" (input)="validatePassword()"
+                    [ngClass]="{ 'invalid': !passwordValid }" required>
+                <button class="password-toggle" type="button" (click)="togglePasswordVisibility('password')">
+                    <i class="fas" [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"></i>
+                </button>
+                <div class="error-message" *ngIf="!passwordValid">{{ passwordErrorMessage }}</div>
+
+            
+                <input [type]="showConfirmPassword ? 'text' : 'password'" id="confirm-password" name="confirm-password"
+                    placeholder="Confirma la contraseña" [(ngModel)]="user_confirmPassword" (input)="validatePassword()"
+                    [ngClass]="{ 'invalid': !confirmPasswordValid }" required>
+                <button class="confirm-password-toggle" type="button"
+                    (click)="togglePasswordVisibility('confirm-password')">
+                    <i class="fas" [ngClass]="showConfirmPassword ? 'fa-eye-slash' : 'fa-eye'"></i>
+                </button>
+                <div class="error-message2" *ngIf="!confirmPasswordValid">{{ confirmPasswordErrorMessage }}</div>
+
+
+                <header>Preguntas de seguridad</header>
+
+                <input type="text" id="preg1" name="preg1" placeholder="¿Cual es su comida favorita?"
+                    [(ngModel)]="preg1" (input)="validarCampo('preg1')" [ngClass]="{'invalid': !preg1Valid}" required>
+                <div class="error-message" *ngIf="!preg1Valid">Esta pregunta es obligatoria.</div>
+
+                <input type="text" id="preg2" name="preg2" placeholder="¿Cual es su serie favorita?" [(ngModel)]="preg2"
+                    (input)="validarCampo('preg2')" [ngClass]="{'invalid': !preg2Valid}" required>
+                <div class="error-message2" *ngIf="!preg2Valid">Esta pregunta es obligatoria.</div>
+
+                <input type="text" id="preg3" name="preg3" placeholder="¿Cual es su amigo favorito?" [(ngModel)]="preg3"
+                    (input)="validarCampo('preg3')" [ngClass]="{'invalid': !preg3Valid}" required>
+                <div class="error-message" *ngIf="!preg3Valid">Esta pregunta es obligatoria.</div>
+                <input type="submit" class="button" value="Registrate">
+            </form>
+
+            <div class="signup">
+                <span class="signup">Ya tienes una cuenta?
+                    <a routerLink="/login">Inicia Sesion</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>

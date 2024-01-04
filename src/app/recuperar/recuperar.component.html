@@ -1,0 +1,35 @@
+<body>    
+    <div class="container">
+        <div class="form-box">
+            <h4>Ingrese su correo electrónico</h4>
+            <input class="input" type="text" id="email" name="email" [(ngModel)]="email" required placeholder="Ingrese su correo electrónico">
+            
+            <h4>¿Qué animal prefiere?</h4>
+            <input class="input" type="text" id="preg1" name="preg1" [(ngModel)]="preg1" required placeholder="Escriba su respuesta">
+            
+            <h4>¿Qué comida prefiere?</h4>
+            <input class="input" type="text" id="preg2" name="preg2" [(ngModel)]="preg2" required placeholder="Escriba su respuesta">
+            
+            <h4>¿Cuál es su color favorito?</h4> 
+            <input class="input" type="text" id="preg3" name="preg3" [(ngModel)]="preg3" required placeholder="Escriba su respuesta">
+            
+            <div class="button-container">
+                <button class="button" value="Verificar" (click)="recuperarClave()">Verificar</button>
+            </div>
+                        
+            <div id="ventanaEmergente" class="ventana-emergente">
+                <h3>Editar Registro</h3>
+                <label>Email: <input type="text" [(ngModel)]="email" readonly></label>
+                
+                <label>Nueva Clave: <input type="Password" [(ngModel)]="clave" (input)="validatePassword()" [ngClass]="{'invalid': !passwordValid}" required></label>
+                <div class="error-message" *ngIf="!passwordValid">{{ passwordErrorMessage }}</div>
+                
+                <label>Confirmar Clave: <input type="Password" (input)="validatePassword()" [ngClass]="{'invalid': !confirmPasswordValid}" required></label>
+                <div class="error-message2" *ngIf="!confirmPasswordValid">{{ confirmPasswordErrorMessage }}</div>
+                
+                <button class="button" value="Cambiar" (click)="cambiarClave(email, clave)">Guardar</button>
+                <button (click)="cerrarVentanaEmergente()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>

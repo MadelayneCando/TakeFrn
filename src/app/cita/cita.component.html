@@ -1,0 +1,62 @@
+
+<section class="citas" >
+    <!-- FUNCIONA CON BOTON AGENDAR CITA -->
+    <div class="entrenamiento-box">  <!-- ESTOY CAMBIANDO ESTO - MD -->
+        <hr>
+        <h2>Formulario de Entrenamiento</h2>  
+        <form id="formulario">     
+            <label class="tema" for="entrenador">Entrenamiento:</label>
+            <select id="identrenamiento" name="identrenamiento" required [(ngModel)]="identrenamientoSeleccionado">
+                <option *ngFor="let ent of entrenamientos" [value]="ent.identrenamiento"> {{ent.ent_nombre}} </option>
+            </select> 
+    
+            <label class="tema" for="fecha">Fecha:</label>
+            <input type="date" id="fecha" [min]="ahora" [(ngModel)]="fecupo" name="fecha" required>
+
+            <button type="button" (click)="verificarClase()">Verifica clase </button>
+    
+            <label *ngIf="bandera" for="precio">Precio Créditos: </label> 
+            <input  *ngIf="bandera" type="number" id="precio" name="precio" placeholder="Precio en créditos" required [(ngModel)]="precio" readonly>
+    
+            <label  *ngIf="bandera" for="hora">Hora:</label>
+            <input   *ngIf="bandera" type="time" id="hora" name="hora" required required [(ngModel)]="hora" readonly>
+
+            <label  *ngIf="bandera" for="cupo">Cupo:</label>
+            <input  *ngIf="bandera" type="number" id="cupo" name="cupo" placeholder="Número de cupo" required [(ngModel)]="cupos" readonly>
+
+            <button type="submit"  *ngIf="bandera" (click)="guardarCita()" (click)="mostrarPerfilUsuario()">Guardar Entrenamiento</button> <!-- ESTOY CAMBIANDO ESTO - MD -->
+        </form>
+        <hr>
+    </div>
+</section>
+
+<body class="contenedor">
+    <div *ngIf="comprado!= 0" class="clase1">
+        <!-- Ventana emergente (modal) -->
+        <div id="ventanaEmergente" class="ventana-emergente">
+            <div class="contenido-ventana">
+                <div class="rating">
+                    <input type='radio' hidden name='rate' id='rating-opt5' value='5' (input)="verPuntuaje('rating-opt5')" >	
+                    <label class='labelest' for='rating-opt5'><span>Muy satisfecho</span></label>
+                    
+                    <input type='radio' hidden name='rate' id='rating-opt4' value='4'  (input)="verPuntuaje('rating-opt4')" >
+                    <label for='rating-opt4'><span>Algo satisfecho</span></label>
+                    
+                    <input type='radio' hidden name='rate' id='rating-opt3' value='3'  (input)="verPuntuaje('rating-opt3')" >
+                    <label for='rating-opt3'><span>Neutral</span></label>
+                    
+                    <input type='radio' hidden name='rate' id='rating-opt2' value='2'  (input)="verPuntuaje('rating-opt2')" >
+                    <label for='rating-opt2'><span>Insatisfecho</span></label>
+                    
+                    <input type='radio' hidden name='rate' id='rating-opt1' value='1'  (input)="verPuntuaje('rating-opt1')" >
+                    <label for='rating-opt1'><span>Muy insatisfecho</span></label>
+                </div>
+                <textarea name="opinion" id='comentario' cols="30" rows="5" placeholder="Tu opinión..."></textarea>
+                <button class="boton-enviar" (click)="registrarPuntuacion()">Enviar</button>
+            </div>
+        </div>
+        <!-- fin Ventana emergente (modal) -->
+    </div>             
+</body>
+
+

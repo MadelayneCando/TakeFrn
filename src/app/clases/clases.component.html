@@ -1,0 +1,107 @@
+<body>
+  <section class="seccion-clases">
+    <div class="container"> 
+        <div class="main">
+          <h2><span>C</span>lases</h2>
+        </div>    
+        <button class="btn price_btn"  routerLink="/perfil">REGRESAR</button>
+        <div><button class="ingreso" (click)="mostrarVentanaEmergenteIngreso()"><i class="fa-solid fa-plus" style="color: #832525;"></i></button>
+          <div class="entrenamiento-box" id="ventanaEmergente" class="ventana-emergente">
+            <h2>Formulario de Clase</h2>  
+            <form>    
+                <label for="entrenador">Entrenamiento:</label>
+                <select id="identrenamiento" name="identrenamiento" required [(ngModel)]="identrenamientoSeleccionado">
+                    <option *ngFor="let ent of entrenamientos" [value]="ent.identrenamiento"> {{ent.ent_nombre}} </option>
+                </select>
+      
+                <label for="instructor">Instructor:</label>
+                <select id="idinstructor" name="idinstructor" required [(ngModel)]="idinstructorSeleccionado">
+                    <option *ngFor="let ins of instructores" [value]="ins.identrenador"> {{ins.en_nombre}} {{ins.en_apellido}} </option>
+                </select>
+        
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" [min]="ahora" [(ngModel)]="fecupo" name="fecha" required>
+      
+                <label for="precio">Precio Créditos: </label> 
+                <input type="number" id="precio" name="precio" placeholder="Precio en créditos" required [(ngModel)]="precio">
+        
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required required [(ngModel)]="hora">
+      
+                <label for="cupo">Cupo:</label>
+                <input type="number" id="cupo" name="cupo" placeholder="Número de cupo" required [(ngModel)]="cupos">
+      
+                <label for="descripcion">Descripcion: </label> 
+                <textarea type="text" id="descripcion" name="descripcion" placeholder="Descripción" required [(ngModel)]="descripcion"> </textarea>
+                <br/><br/>
+                <button type="submit" (click)="guardarCita()">Guardar Clase</button>
+                <button  (click)="cerrarVentanaEmergente()">Cancelar</button>
+            </form>
+        </div>
+        </div>
+        <table id="miTabla">
+            <thead>
+                <tr> 
+                    <th>Fecha</th> 
+                    <th>Entrenamiento</th>
+                    <th>Entrenador</th>
+                    <th>Precios creditos</th>
+                    <th>Hora</th>
+                    <th>Descripcion</th>
+                    <th>Cupo</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let clas of clases">
+                <td pattern="\d{4}-\d{2}-\d{2}"  id="fecha-cell"> {{clas.cla_fecha | date:'yyyy-MM-dd'}} </td>
+                <td>{{clas.identrenamiento}} </td>
+                <td>{{clas.identrenador}} </td>
+                <td>{{clas.cla_preciocreditos}} </td>
+                <td>{{clas.cla_hora}} </td>
+                <td>{{clas.cla_descripcion}} </td>
+                <td>{{clas.cla_cupo}} </td>
+                <td>{{clas.cla_estado}} </td>
+                <td> 
+                  <button  class="btn btn-outline-primary" style="margin-right: 10px;" (click)="mostrarVentanaEmergente(clas.idclase)"><i class="fa-solid fa-pen-to-square"></i> </button>
+                    <div id="ventanaEmergente2" class="ventana-emergente">
+                      <h3>Editar Clase</h3>
+                        <label>Fecha: <input type="text" [(ngModel)]="fecha" readonly></label>
+                        
+                        <label for="entrenamiento">Entrenamiento:</label>                    
+                        <select id="identrenamiento" name="identrenamiento" required [(ngModel)]="identrenamiento">
+                            <option value="">Selecciona un entrenamiento</option>
+                            <option *ngFor="let ent of entrenamientos" [value]="ent.identrenamiento"> {{ent.ent_nombre}} </option>
+                        </select>
+                        
+                        <label for="entrenador">Entrenador:</label>                    
+                        <select id="identrenador" name="identrenador" required [(ngModel)]="identrenador">
+                            <option value="">Selecciona un entrenador</option>
+                            <option *ngFor="let inst of instructores" [value]="inst.identrenador"> {{inst.en_nombre}} {{inst.en_apellido}} </option>
+                        </select>
+
+                        <label for="precred">Precios creditos: 
+                        <input type="number" [(ngModel)]="precred"></label>
+
+                        <label for="cla_hora">Hora: 
+                        <input type="time" [(ngModel)]="cla_hora"></label>
+                        
+                        <label for="cla_descrip">Descripcion: 
+                        <input type="text" [(ngModel)]="cla_descrip" ></label>
+                        
+                        <label for="cla_cupo">Cupo: 
+                        <input type="number" [(ngModel)]="cla_cupo"></label>
+
+                        <button (click)="actualizar()">Guardar Cambios</button>
+                        <button (click)="cerrarVentanaEmergente()">Cancelar</button>
+                        <button (click)="cerrarVentanaEmergente()"> Hola </button>
+                    </div> 
+                    <button class="btn btn-outline-danger" (click)="cambiaEstadoClase(clas.idclase)"><i class="fa-solid fa-clock-rotate-left"></i></button>                        
+                </td>
+              </tr>
+            </tbody> 
+        </table>   
+    </div>
+  </section>
+</body>

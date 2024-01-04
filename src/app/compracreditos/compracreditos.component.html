@@ -1,0 +1,52 @@
+    <div class="main">
+        <h2><span>N</span>Nuestros</h2>
+        <h6>Planes</h6>
+        <hr><hr>
+    </div>
+    <div class="price_grid" >
+        <div class="price_grid">
+            <div class="card-container" *ngFor="let cred of creditos" data-aos="flip-left" data-aos-delay="100"
+                data-aos-duration="1000">
+                <div class="card">
+                  <div class="container text-center">
+                    <div class="row align-items-start">
+                      <div class="col">
+                          <div class="card-body">
+                              <h3 class="card-title"> {{cred.cre_nombre}} </h3>
+                              <p><small class="text-muted">Con un precio de ${{cred.cre_precio}}</small></p>
+                          <p><small class="text-muted">Posees {{cred.cre_cantidad}} creditos</small></p>
+                          <button class="btn price_btn"  (click)="compraCreditos(cred.idcreditos)">UNETE AHORA</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div> 
+        </div>
+    </div>  
+
+    <div *ngIf="comprado!= 0">
+      <!-- Ventana emergente (modal) -->
+      <div id="ventanaEmergente" class="ventana-emergente">
+        <div class="contenido-ventana">
+            <div class="rating">
+                <input type='radio' hidden name='rate' id='rating-opt5' value='5' (input)="verPuntuaje('rating-opt5')" >	
+                <label for='rating-opt5'><span>Muy satisfecho</span></label>
+                
+                <input type='radio' hidden name='rate' id='rating-opt4' value='4'  (input)="verPuntuaje('rating-opt4')" >
+                <label for='rating-opt4'><span>Algo satisfecho</span></label>
+                
+                <input type='radio' hidden name='rate' id='rating-opt3' value='3'  (input)="verPuntuaje('rating-opt3')" >
+                <label for='rating-opt3'><span>Neutral</span></label>
+                
+                <input type='radio' hidden name='rate' id='rating-opt2' value='2'  (input)="verPuntuaje('rating-opt2')" >
+                <label for='rating-opt2'><span>Insatisfecho</span></label>
+                
+                <input type='radio' hidden name='rate' id='rating-opt1' value='1'  (input)="verPuntuaje('rating-opt1')" >
+                <label for='rating-opt1'><span>Muy insatisfecho</span></label>
+            </div>
+            <textarea name="opinion" id='comentario' cols="30" rows="5" placeholder="Tu opinión..."></textarea>
+            <button class="boton-enviar" (click)="registrarPuntuacion()">Enviar</button>
+        </div>
+    </div>
+  

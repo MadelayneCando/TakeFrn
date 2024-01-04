@@ -1,0 +1,31 @@
+<header>    
+    <div class="contenedor-textos">
+        <h1>MÁS QUE UN SIMPLE ESTILO DE VIDA</h1>
+        <H2>¿QUÉ ESPERAS PARA COMENZAR?</H2>
+        <button class="boton-inicia" routerLink="/categorias">INICIA YA</button>      
+    </div>
+</header> 
+<body>
+    <section class="inicio" id="inicio">
+        <div class="content">
+            <h3>Vive la experencincia <br><span>KICS</span></h3>
+            <p>Bienvenido a una experiencia de bienestar 360° que combiana todas 
+                las ultimas tendencias/novedades Fitness. Inscribete y reserva
+                tu plaza con instructor y horario a tu elección.</p>
+        </div>
+        <div class="image">
+            <img src="assets/img/eje.png" alt="">
+        </div>
+    </section>
+    <app-imghome></app-imghome> 
+    <div *ngIf="rol== 0">
+        <div id="ventanaEmergente" class="ventana-emergente">
+            <div class="contenido-ventana">
+                <div class="image-aviso">
+                    <img src="assets/img/aviso.png" alt="">
+                </div>
+                <button class="boton-cerrar" (click)="cerrarVentanaEmergente()">Listo</button>
+            </div>
+        </div>
+    </div>        
+</body>

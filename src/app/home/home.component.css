@@ -1,0 +1,275 @@
+header{
+    background-image: linear-gradient(
+        rgb(0,0,0,0.7),
+        rgb(0,0,0,0.7)),
+    url('https://static.vecteezy.com/system/resources/previews/002/029/070/original/man-holding-a-dumbbell-in-a-gym-with-row-of-dumbbells-in-the-background-free-photo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section{
+    min-height: 70vh;
+    padding: 0 9%;
+    padding-top: 7.5rem ;
+    padding-bottom: 2rem;
+}
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(src/assets/img/inicio_fondo1.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio .image img{
+    width: 40vw;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+.inicio .content h3{
+    font-size: 5.5rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+.inicio .content h3 span{
+    color: #2C3E56;
+    text-transform: uppercase;
+}
+
+.inicio .content p{
+    font-size: 1.7rem;
+    color: darkgrey;
+    padding: 1rem 0;
+}
+
+.img-logo{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 120px;
+    height: 120px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-textos{
+    width: 900px;
+    height: auto;
+    margin: 150px auto;
+}
+
+.boton-inicia {
+    display: block;
+    padding: 15px 30px;
+    background-color: #800000; 
+    color: white;
+    border: none;
+    border-radius: 50px; 
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.boton-inicia:hover {
+    background-color: #a00000; 
+}
+
+h1{
+    font-size: 7rem;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffff;
+}
+
+body{
+    width: 100%;
+    position: relative;
+}
+
+.boton-cerrar {
+    display: block;
+    padding: 15px 30px;
+    background-color: #800000; 
+    color: white;
+    border: none;
+    border-radius: 50px; 
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.boton-cerrar:hover {
+    background-color: #a00000; 
+}
+
+/* Estilos para pantallas pequeñas (por ejemplo, dispositivos móviles) */
+@media (max-width: 768px) {
+    header {
+        min-height: 50vh;
+    }
+
+    .contenedor-textos {
+        width: 90%; /* Aumenta el ancho del contenedor de texto */
+        margin: 50px auto; /* Reduce el margen superior e inferior */
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 20px; /* Reduce el espacio inferior */
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px; /* Reduce el espacio inferior */
+    }
+
+    .boton-inicia {
+        font-size: 16px;
+        padding: 10px 20px; /* Reduce el tamaño del botón */
+    }
+    .boton-cerrar {
+        font-size: 16px;
+        padding: 10px 20px; /* Reduce el tamaño del botón */
+    }
+
+    .inicio .image img {
+        width: 80%; /* Aumenta el ancho de la imagen */
+    }
+
+    .inicio .content h3 {
+        font-size: 3rem; /* Ajusta el tamaño del encabezado */
+    }
+
+    .inicio .content p {
+        font-size: 1.4rem; /* Ajusta el tamaño del párrafo */
+    }
+}
+
+/* Estilos para pantallas medianas (por ejemplo, tabletas) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        min-height: 60vh;
+    }
+
+    .contenedor-textos {
+        width: 80%; /* Aumenta el ancho del contenedor de texto */
+        margin: 100px auto; /* Reduce el margen superior e inferior */
+    }
+
+    h1 {
+        font-size: 5rem;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+
+    .boton-inicia {
+        font-size: 18px;
+        padding: 15px 30px; /* Aumenta el tamaño del botón */
+    }
+    .boton-cerrar {
+        font-size: 18px;
+        padding: 15px 30px; /* Aumenta el tamaño del botón */
+    }
+
+    .inicio .image img {
+        width: 70%; /* Ajusta el ancho de la imagen */
+    }
+
+    .inicio .content h3 {
+        font-size: 4rem;
+    }
+
+    .inicio .content p {
+        font-size: 1.6rem; /* Ajusta el tamaño del párrafo */
+    }
+}
+
+/*modal*/
+    .image-aviso img {
+        width: 500px; /* Establece el ancho deseado para la imagen */
+        height: auto;
+        margin-bottom: 10px;
+    }
+     /* Estilo para la ventana emergente */
+    .ventana-emergente-toggle {
+        display: none;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .ventana-emergente {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .ventana-emergente-toggle:checked + .ventana-emergente {
+        display: flex;
+    }
+
+    .contenido-ventana {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .ventana-emergente {
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .boton-enviar {
+            font-size: 18px;
+            padding: 15px 30px; 
+        }
+    }

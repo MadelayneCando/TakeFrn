@@ -1,0 +1,190 @@
+.main{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.main h2{
+    font-size: 35px;
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    display: inline-block;
+    color: black;
+}
+
+span{
+    color: brown;
+}
+
+.main h2::before{
+    position: absolute;
+    content: '';
+    background: brown;
+    height: 3px;
+    width: 30%;
+    right: -15px;
+    bottom: 0;
+    border-radius: 50px;
+
+}
+
+.main h6{
+    margin-top: 10px;
+    font-size: 30px;
+    font-size: sans-serif;
+    font-weight: lighter;
+    color: aliceblue;
+
+}
+#miTabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#miTabla th {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#miTabla tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#miTabla tr:nth-child(odd) {
+    background-color: white;
+}
+
+#miTabla td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#miTabla button {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    /* margin-right: 5px; */
+    margin-top: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#miTabla button:hover {
+    background-color: rgb(110, 30, 30);
+}
+
+
+/* Estilos para el contenedor principal */
+.login-records-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* Estilos para las celdas de encabezado */
+th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilos para las filas impares */
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para las celdas */
+td {
+    padding: 8px;
+}
+
+/* body{
+    background-color: #152b3c;
+} */
+body {
+
+    background-color: #152b3c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-left: 10%; /* Ajusta el valor según sea necesario */
+    margin-right: 10%; /* Ajusta el valor según sea necesario */
+  
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.fila-negra td {
+    background-color: black;
+    color: black;
+}
+
+.horas-fondo {
+    background-color: brown;
+    color: white;
+}
+
+
+@media only screen and (max-width: 767px) {
+    td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    th {
+        display: none;
+        text-align: center;
+    }
+
+    .fila-negra td {
+        background-color: black;
+        color: black;
+    }
+}
+

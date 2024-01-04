@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<body>
+  <div class="login-container">
+    <div class="login-info-container">  
+      <h1 class="title">Inicia Sesion</h1>
+      <br><br><br>
+      <form class="inputs-container">
+        <input class="input" type="text" id="user_email" name="user_email" required placeholder="Correo electrónico">
+        <div class="input-container">
+          <input class="input" #user_contraseña id="user_contraseña" type="password" name="user_contraseña" required placeholder="Contraseña">
+          <button class="toggle-password-btn" (click)="togglePasswordVisibility()">
+            <i class="fas" [ngClass]="{'fa-eye': passwordVisible, 'fa-eye-slash': !passwordVisible}"></i>
+          </button>
+        </div>
+        <p>¿Olvidaste tu contraseña?  <a routerLink="/recuperar">Recuperar contraseña</a></p>       
+        <p>No tienes cuenta? <a routerLink="/register">Registrate</a></p>
+      </form>
+      <button class="btn" (click)="inicioSesion()">Inicia</button>
+    </div>  
+    <img src="assets/img/logo.png" alt="">
+  </div>
+</body>
