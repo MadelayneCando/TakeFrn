@@ -3,9 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start:frontend": "ng serve",
-    "start:backend": "cd ../BackendAgenda && nodemon index.js",
-    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
