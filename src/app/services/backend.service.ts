@@ -61,8 +61,8 @@ export class BackendService {
   }
 
   verificarClase(identramiento: number, fecha:string){
-    console.log("Llego clase ");
-    return this.http.post(`${this.backendUrl}/api/verificarClase`,{
+    console.log("Llego clase ");  
+    return this.http.post(`${this.backendUrl}/api/verificarClases`,{
       identrenamiento: identramiento, 
       cla_fecha: fecha
     }); 
