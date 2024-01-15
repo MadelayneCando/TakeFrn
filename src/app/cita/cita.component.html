@@ -9,8 +9,8 @@
             <select id="identrenamiento" name="identrenamiento" required [(ngModel)]="identrenamientoSeleccionado">
                 <option *ngFor="let ent of entrenamientos" [value]="ent.identrenamiento"> {{ent.ent_nombre}} </option>
             </select> 
-    
-            <label class="tema" for="fecha">Fecha:</label>
+            
+            <label class="tema"  for="fecha">Fecha:</label>
             <input type="date" id="fecha" [min]="ahora" [(ngModel)]="fecupo" name="fecha" required>
 
             <button type="button" (click)="verificarClase()">Verifica clase </button>

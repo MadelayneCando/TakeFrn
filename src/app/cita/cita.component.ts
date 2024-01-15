@@ -36,15 +36,8 @@ export class CitaComponent implements OnInit{
   ahora: any;
   fecupo: any;
 
-  /*CAMBIOS MADE
-
-  mostrarPerfil:boolean=false;
-  mostrarFormulario:boolean=false;
-  //CAMBIOS MADE*/
-
   mostrarPerfil = false;
   mostrarFormulario: boolean=false;
-
 
   mostrarPerfilUsuario() {
     this.mostrarFormulario = false;
@@ -57,12 +50,7 @@ export class CitaComponent implements OnInit{
     this.comprado=0;
     this.obtenerEntrenamientos();
     const dataPite = new DatePipe('en-Us')
-    this.ahora = dataPite.transform(new Date(), 'yyyy-MM-dd')
-    /*if(this.mostrarFormulario==false){
-      if(this.user_email!==null){
-        this.verUsuarioPorClase(this.user_email);
-      }
-    } */       
+    this.ahora = dataPite.transform(new Date(), 'yyyy-MM-dd')      
   }
 
   obtenerEntrenamientos(): void{  
@@ -90,7 +78,7 @@ export class CitaComponent implements OnInit{
                         this.cupos = clase.clase_cupo;
                         this.precio = Number(clase.clase_preciocreditos);
                         this.hora = clase.clase_hora;  
-                        this.id = clase.clase_id;   
+                        this.id = clase.clase_id;    
                         const idclase = String(this.id);
                         localStorage.setItem('idclase', idclase); //subir idclase a local storage
                     }    
@@ -114,6 +102,46 @@ export class CitaComponent implements OnInit{
         }
     );
   }
+
+  verificarClaseA() {
+    const fecha = (document.getElementById('fecha') as HTMLInputElement).value;
+    console.log(fecha);
+    const valorSeleccionado = Number(this.identrenamientoSeleccionado);
+    console.log(valorSeleccionado);
+    const claseService = this.injector.get(BackendService);
+    claseService.verificarClase(valorSeleccionado, fecha).subscribe(
+      (result) => {
+        if (Array.isArray(result)) {
+          if (result.length > 0) {
+              for (const clase of result) {
+                  this.cupos = clase.clase_cupo;
+                  this.precio = Number(clase.clase_preciocreditos);
+                  this.hora = clase.clase_hora;  
+                  this.id = clase.clase_id;   
+                  const idclase = String(this.id);
+                  localStorage.setItem('idclase', idclase); //subir idclase a local storage
+                }    
+                this.bandera = true;
+              } else {
+                this.bandera = false;
+                Swal.fire("Mensaje", "No hay clase", "info");
+            }
+            } else {
+                if (result ==="No hay clase") {
+                  this.bandera = false;
+                  Swal.fire("Mensaje", "No hay clase", "info");
+              } else {
+                    
+              }
+            }
+        },
+          (error) => {
+            Swal.fire("Error", "Esta clase no se encuentra disponible", "warning");
+            console.error(error);
+        }
+    );
+  }
+
 
   guardarCita(){
     const idusuario= Number(this.idusuario);  

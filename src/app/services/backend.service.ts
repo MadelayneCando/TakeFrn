@@ -60,10 +60,11 @@ export class BackendService {
       });
   }
 
-  verificarClase(p_identrenamiento: number, p_cla_fecha:string){
+  verificarClase(identramiento: number, fecha:string){
+    console.log("Llego clase ");
     return this.http.post(`${this.backendUrl}/api/verificarClase`,{
-      p_identrenamiento: p_identrenamiento, 
-      p_cla_fecha: p_cla_fecha
+      identrenamiento: identramiento, 
+      cla_fecha: fecha
     }); 
   }
 
