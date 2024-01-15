@@ -74,6 +74,7 @@ export class CitaComponent implements OnInit{
     console.log("HOLA");
     claseService.verificarClase(valorSeleccionado, fecha).subscribe(
         (result) => {
+          console.log("CON FE");
             if (Array.isArray(result)) {
                 if (result.length > 0) {
                     for (const clase of result) {
