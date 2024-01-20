@@ -20,7 +20,9 @@
             <button class="price_btn" (click)="mostrarCita()" *ngIf="rol===2">MOSTRAR CITA</button>
             <!-- ESTOY CAMBIANDO ESTO - MD -->
             <button class="price_btn" *ngIf="rol===2" (click)="agendarCita()">AGENDAR CITAS</button>
+            <button class="price_btn" *ngIf="rol===2" (click)="RELOAD()">DATOS PERSONALES</button>
             <!--ESTOY CAMBIANDO ESTO - MD -->
+
 
         </div>
 
@@ -53,10 +55,12 @@
             </div>
         </div>
 
+
         <div *ngIf="!mostrarPerfil">
             <app-cita *ngIf="mostrarFormularioAgendarCita"></app-cita> <!-- ESTOY CAMBIANDO ESTO - MD -->
             <app-lista-citas *ngIf="mostrarFormularioMostrarCita"></app-lista-citas> <!-- ESTOY CAMBIANDO ESTO - MD -->
         </div>
+        <button class="btn price_btn" (click)="limpiarLocal()">CERRAR SESION</button>
     </div>
 
 

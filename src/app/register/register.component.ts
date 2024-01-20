@@ -1,8 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-
 import { BackendService } from '../services/backend.service';
 import Swal from 'sweetalert2';
-
 
 @Component({
   selector: 'app-register',
@@ -13,8 +11,6 @@ export class RegisterComponent {
 
 @ViewChild('password') passwordInput!: ElementRef;
 @ViewChild('confirmpassword') confirmPasswordInput!: ElementRef;
-
-
 
   user_nombre: string = "";
   user_apellido: string = "";
@@ -50,7 +46,7 @@ export class RegisterComponent {
   confirmPasswordVisible: boolean = false;
 
   showPassword = false;
-showConfirmPassword = false;
+  showConfirmPassword = false;
 
 togglePasswordVisibility(field: string) {
   if (field === 'password') {
@@ -58,9 +54,7 @@ togglePasswordVisibility(field: string) {
   } else if (field === 'confirm-password') {
     this.showConfirmPassword = !this.showConfirmPassword;
   }
-}
-
-  
+} 
 
   setVacio(field: string) {
     const inputValue = ((document.getElementById(field) as HTMLInputElement))!.value;
@@ -93,30 +87,22 @@ togglePasswordVisibility(field: string) {
         break;
     }
   }
-  
-  
-  
+    
   validateTelefono() {
     // Verificar que el teléfono tenga exactamente 10 dígitos
     this.telefonoValid = /^\d{10}$/.test(this.user_telefono);
     this.telefonoErrorMessage = this.telefonoValid ? "" : "El teléfono debe tener exactamente 10 dígitos.";
-  }
-  
-  
+  }  
   validatePassword() {
-    this.passwordValid = this.user_password.length >= 8;
-    this.passwordValid = this.passwordValid && /[A-Z]/.test(this.user_password);
-    this.passwordValid = this.passwordValid && /\d/.test(this.user_password);
-    this.passwordValid = this.passwordValid && /[!@#$%^&*()_+[\]{};':"\\|,.<>/?]+/.test(this.user_password);
-    this.passwordErrorMessage = this.passwordValid ? "" : "La contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un carácter especial.";
+
     this.confirmPasswordValid = this.user_password === this.user_confirmPassword;
     this.confirmPasswordErrorMessage = this.confirmPasswordValid ? "" : "Las contraseñas no coinciden.";
   }
+
   validateCedula() {
     this.cedulaValid = /^\d{10}$/.test(this.user_cedula);
     this.cedulaErrorMessage = this.cedulaValid ? "" : "La cédula debe tener exactamente 10 dígitos numéricos.";
   }
-
 
   validateEmail() {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;

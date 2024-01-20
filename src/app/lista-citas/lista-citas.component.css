@@ -1,286 +1,291 @@
-
 .entrenamiento-box {
-    border: 1px solid #3e1a1a;
-    padding: 20px;
-    width: 300px;
-    margin: 0 auto;
-    background-color: #d9d9d9;
-    backdrop-filter: blur(20px);
-    border: 2px solid rgba(3, 3, 3, 0.5);
-    padding-top: 0.5rem;
-    font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 20px;
+  border: 1px solid #3e1a1a;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  background-color: #d9d9d9;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(3, 3, 3, 0.5);
+  padding-top: 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 20px;
 }
 
 label {
-    display: block;
-    margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
 
 }
 
 input[type="text"],
 input[type="number"],
 input {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
 button {
-    background-color: #353535;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 20px;
+  background-color: #353535;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 button:hover {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 #miTabla {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  
-  #miTabla th {
-    background-color: brown;
-    color: white;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  #miTabla tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  #miTabla tr:nth-child(odd) {
-    background-color: white;
-  }
-  
-  #miTabla td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-  }
-  
-  #miTabla button {
-    background-color: brown;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin-top: 5px;
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  #miTabla button:hover {
-    background-color: rgb(110, 30, 30);
-  }
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#miTabla th {
+  background-color: brown;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#miTabla tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#miTabla tr:nth-child(odd) {
+  background-color: white;
+}
+
+#miTabla td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+#miTabla button {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#miTabla button:hover {
+  background-color: rgb(110, 30, 30);
+}
 
 
 /*contenedor principal */
 .login-records-container {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
 /*  tabla */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
 }
 
 /*celdas de encabezado */ 
 th {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: left;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
 }
 
 /* filas impares */
 tr:nth-child(odd) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 /*  celdas */
 td {
-    padding: 8px;
+  padding: 8px;
 }
 
 /* usuario */
 .main{
-  width: 100%;
-  text-align: center;
-  padding-bottom: 20px;
+width: 100%;
+text-align: center;
+padding-bottom: 20px;
 }
 
 .main h2{
-  font-size: 35px;
-  position: relative;
-  text-align: center;
-  padding-top: 100px;
-  display: inline-block;
-  color: black;
+font-size: 35px;
+position: relative;
+text-align: center;
+padding-top: 100px;
+display: inline-block;
+color: black;
 }
 
 span{
-  color: brown;
+color: brown;
 }
 
 .main h2::before{
-  position: absolute;
-  content: '';
-  background: brown;
-  height: 3px;
-  width: 30%;
-  right: -15px;
-  bottom: 0;
-  border-radius: 50px;
+position: absolute;
+content: '';
+background: brown;
+height: 3px;
+width: 30%;
+right: -15px;
+bottom: 0;
+border-radius: 50px;
 
 }
 
 .main h6{
-  margin-top: 10px;
-  font-size: 30px;
-  font-size: sans-serif;
-  font-weight: lighter;
-  color: aliceblue;
+margin-top: 10px;
+font-size: 30px;
+font-size: sans-serif;
+font-weight: lighter;
+color: aliceblue;
 
 }
 
 /* EDICION DEL CSS PARA EL RECUADRO LIKER. LA CLASE1 es para que lo demas label no se dañen xd */
 .contenedor body {  /* Este es el body que estaba primero*/
-  background: #e2e1d9;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+background: #e2e1d9;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .rating {
-  display: inline-block;
-  font-size: 0;
-  position: relative;
-  text-transform: capitalize;
-  padding: 0 50px 8%;
-  color: gray;
+display: inline-block;
+font-size: 0;
+position: relative;
+text-transform: capitalize;
+padding: 0 50px 8%;
+color: gray;
 }
 
 .clase1 label {  /* Este es el label del segundo body*/
-  float: right;
-  padding: 0;
-  font-size: 50px;
-  cursor: pointer;
+float: right;
+padding: 0;
+font-size: 50px;
+cursor: pointer;
 }   
 
 .clase1 label::before {
-  content: "\2606";
-  padding-bottom: 8px;
-  display: inline-block;
-  transition: 0.2s;
+content: "\2606";
+padding-bottom: 8px;
+display: inline-block;
+transition: 0.2s;
 } 
 
 /* CON LO QUE DICE SPAN DESAPARECIO LAS PALABRITAS */
 span {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  height: 20px;
-  font-size: 1rem;
-  white-space: nowrap;
-  transition: 0.15s ease-out;
-  pointer-events: none;
-  letter-spacing: -2px;
-  transform: translateY(-50%);
+opacity: 0;
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+height: 20px;
+font-size: 1rem;
+white-space: nowrap;
+transition: 0.15s ease-out;
+pointer-events: none;
+letter-spacing: -2px;
+transform: translateY(-50%);
 } 
 
 label:hover span {
-  opacity: 1;
-  transform: none;
-  letter-spacing: 0;
+opacity: 1;
+transform: none;
+letter-spacing: 0;
 }
 
 input:checked ~ label::before {
-  content: "\2605";
-  color: #800000;
-  filter: drop-shadow(0 0 4px);
-  transform: rotate(.2turn);
-  transition-delay: calc(0.1 * attr(data-idx integer));
+content: "\2605";
+color: #800000;
+filter: drop-shadow(0 0 4px);
+transform: rotate(.2turn);
+transition-delay: calc(0.1 * attr(data-idx integer));
 }
 
 /* Estilo para la ventana emergente */
 .ventana-emergente-toggle {
-  display: none;
+display: none;
 }
 
 .contendor body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+margin: 0;
+font-family: Arial, sans-serif;
 }
 
 .ventana-emergente {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1;
 }
 
 .contenido-ventana {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
+background-color: #fff;
+padding: 20px;
+border-radius: 5px;
+text-align: center;
 }
 
 /*boton enviar*/
 .boton-enviar {
-  display: block;
-  padding: 15px 30px;
-  background-color: #800000; 
-  color: white;
-  border: none;
-  border-radius: 50px; 
-  cursor: pointer;
-  font-size: 16px;
-  margin: 0 auto;
+display: block;
+padding: 15px 30px;
+background-color: #800000; 
+color: white;
+border: none;
+border-radius: 50px; 
+cursor: pointer;
+font-size: 16px;
+margin: 0 auto;
 
 }
 
 .boton-enviar:hover {
-  background-color: #a00000; 
+background-color: #a00000; 
 }
 
 @media (max-width: 768px) {
-  .boton-enviar {
-      font-size: 16px;
-      padding: 10px 20px; /* Reduce el tamaño del botón */
-  }
+.boton-enviar {
+    font-size: 16px;
+    padding: 10px 20px; /* Reduce el tamaño del botón */
+}
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .boton-enviar {
-      font-size: 18px;
-      padding: 15px 30px; /* Aumenta el tamaño del botón */
-  }
+.boton-enviar {
+    font-size: 18px;
+    padding: 15px 30px; /* Aumenta el tamaño del botón */
+}
 }
 
 #u{
-  color: #800000;
+color: #800000;
+}
+
+@media (max-width: 400px) {
+#miTabla {
+  font-size: 0.7em;
+}
 }

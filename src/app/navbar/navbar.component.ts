@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -20,11 +20,10 @@ export class NavbarComponent {
 
   cerrarMenu() {
     this.menuAbierto = false;
-    window.location.href='/perfil';
-    // this.router.navigate(['/perfil']);
+
   }
 
-  constructor(private router: Router){}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute){}
 
   ngOnInit(){
 
@@ -38,7 +37,6 @@ export class NavbarComponent {
     }
   }
 
-  
   toggleDropdown() {
     this.dropdownVisible = !this.dropdownVisible;
   }
@@ -49,6 +47,19 @@ export class NavbarComponent {
   }
   
   perfil(){
+  
     this.router.navigate(['/perfil']);
+  }
+
+  navegarPerfil() {
+    this.cerrarMenu(); 
+    const currentRoute = this.activatedRoute.snapshot.routeConfig?.path;
+    const isPerfilRoute = currentRoute === 'perfil'; 
+    if (isPerfilRoute) {
+      this.router.navigate(['/perfil']);
+    } else {
+  
+      this.router.navigateByUrl('/perfil', { skipLocationChange: true });
+    }
   }
 }

@@ -33,7 +33,7 @@ export class PerfilComponent {
 
   usuarios: any[]= [];
 
-  mostrarPerfil= true; 
+  mostrarPerfil= true; //asi no es necesario inicialaizarla
   mostrarFormularioAgendarCita=true;
   mostrarFormularioMostrarCita=true;
   id:number=0; 
@@ -50,6 +50,10 @@ export class PerfilComponent {
     this.mostrarFormularioAgendarCita = true;
     this.mostrarFormularioMostrarCita=false;
     localStorage.setItem('estadoFormulario','ocultar');
+  }
+
+  RELOAD(){
+    location.reload();
   }
 
   constructor(private router: Router, private backend: BackendService, private injector:Injector) { }
@@ -102,10 +106,11 @@ export class PerfilComponent {
 
   limpiarLocal() {
     localStorage.clear();
-    this.router.navigate(['/login']);
+    window.location.href = "/login";
   }
 
   toggleEditing() {
+
     if (this.editing) {
       this.modificarUsuario();
     }
@@ -156,7 +161,6 @@ export class PerfilComponent {
     this.mostrarComponenteClases = false;
     this.mostrarComponenteUsuarios=true;
   }
-
   
   verUsuarioPorClase(){
     const idclase = Number(localStorage.getItem('idclase'));
@@ -172,5 +176,3 @@ export class PerfilComponent {
   }
   
 }
-
-

@@ -35,18 +35,6 @@
     border-radius: 0 0 20px 20px;
 }
 
-.seccion-perfil-usuario .perfil-usuario-portada .boton-portada {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    border: 0;
-    border-radius: 8px;
-    padding: 12px 25px;
-    background-color: rgba(0, 0, 0, .5);
-    color: #fff;
-    cursor: pointer;
-}
-
 .seccion-perfil-usuario .perfil-usuario-portada .boton-portada i {
     margin-right: 1rem;
 }
@@ -73,8 +61,6 @@
     border-radius: 50%;
 }
 
-
-
 .seccion-perfil-usuario .perfil-usuario-body {
     width: 70%;
     position: relative;
@@ -93,13 +79,12 @@
     font-size: 0.95em;
 }
 
-
 .seccion-perfil-usuario .perfil-usuario-bio {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center; /* Añadido para centrar verticalmente */
+    align-items: center; 
     padding: 1.5rem 2rem;
     box-shadow: 0 0 12px rgba(0, 0, 0, .2);
     background-color: #fff;
@@ -108,13 +93,12 @@
     margin-bottom: 1.25rem;
 }
 
-
 .seccion-perfil-usuario .perfil-usuario-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    display: flex;
+    grid-template-columns: 1fr 1fr;
     gap: 10px; 
     justify-content: space-between;
-    padding: 1.5rem 2rem;
+    padding: 5px 2px;
     box-shadow: 0 0 12px rgba(0, 0, 0, .2);
     background-color: #fff;
     border-radius: 15px;
@@ -122,8 +106,6 @@
     margin-bottom: 30px;
     position: relative;
 }
-
-
 
 .seccion-perfil-usuario .lista-datos {
     width: 50%;
@@ -134,19 +116,13 @@
 }
 
 .seccion-perfil-usuario .lista-datos li {
-    padding: 5px 0;
-    /* display: flex; */
+    /* padding: 2px; */
     align-items: center;
     margin-bottom: 10px;
 }
 
-.lista-datos li input {
-    margin-left: 10px; /* Agrega un margen a la izquierda de los input */
-    
-}
-
 .price_btn {
-    display: inline-block; /* o puedes usar display: inline-flex; */
+    display: inline-block; 
     color: brown;
     background-color: rgb(135, 48, 48);
     border: 2px solid rgb(135, 48, 48);
@@ -248,8 +224,6 @@ body, .modal{
     margin-bottom: 10px;
     color: white;
 }
-
-
 .lbl-modal:hover{
     color: #ffffff;
     background-color: rgb(119, 49, 49);
@@ -260,11 +234,31 @@ body, .modal{
         align-items: center;
         width: 100%;
     }
+}
 
+@media (max-width: 376px) {
+    .seccion-perfil-usuario .perfil-usuario-header {
+        width: 90%;
+        margin-bottom: 1.25rem;
+    }
+
+    .seccion-perfil-usuario .perfil-usuario-bio {
+        width: 90%;
+        margin-left: 15px;
+    }
+    
+    .seccion-perfil-usuario .perfil-usuario-footer {
+        width: 94%;
+        margin-left: 10px;
+
+    }
+    
+    .lista-datos li input {
+        width: 100%;        
+    }
 }
 
 /* agregado */
-
     .botonesadmi-container {
         position: absolute;
         left: 0;

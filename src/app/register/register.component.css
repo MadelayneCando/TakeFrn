@@ -42,21 +42,23 @@ body{
 }
 
 .container{  
-  position: absolute;
+  /* position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%,-30%);
-  width: 100%;
+  width: 100%; */
   backdrop-filter: blur(20px);
   background: transparent;
   border-radius: 20px;
   box-shadow: 0 0 30px rgb(0, 0, 0, .5);
   border: 2px solid rgb(255, 255, 255, .5);
  /* margin-top: 215px; */
+  max-width: 700px; /* Tamaño máximo del contenedor en pantallas grandes */
+  margin: 0 auto;
 }
 
 .container .form{
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 20px;    
 }
 .form header{
@@ -140,7 +142,7 @@ box-sizing: border-box;
   color: #555; 
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .container {
     top: 65%;
     margin-bottom: 10%;
@@ -151,4 +153,4 @@ box-sizing: border-box;
     margin-top: 10px;
     margin-bottom: 10px;
   }
-}
+} */

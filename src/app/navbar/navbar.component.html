@@ -14,7 +14,7 @@
       <ng-container *ngIf="bandera; else login">
         <a class="btn-inicio" (click)="toggleDropdown()"> {{nombre}} </a>
         <div class="dropdown-content" [ngClass]="{'show': dropdownVisible}">
-          <a  (click)="cerrarMenu()">Perfil</a>
+          <a (click)="navegarPerfil()">Perfil</a>
           <a (click)="cerrarSesion()">Cerrar Sesión</a>
         </div>
       </ng-container>
@@ -22,8 +22,6 @@
         <a class="btn btn-dark" routerLink="/login" (click)="cerrarMenu()">INICIO DE SESION</a>
       </ng-template>
     </div>
-
-
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -34,19 +32,18 @@
         <a class="routerLink btn-inicio" routerLink="/horario">HORARIO </a>
         <a class="routerLink btn-categorias" routerLink="/categorias">CATEGORIAS </a>
         <div>
-          <ng-container *ngIf="bandera; else login">
-            <a class="dropdown-trigger" (click)="toggleDropdown()"> {{nombre}} </a>
-            <div class="dropdown-content" [ngClass]="{'show': dropdownVisible}">
-              <a (click)="perfil()">Perfil</a>
-              <a (click)="cerrarSesion()">Cerrar Sesión</a>
-            </div>
-          </ng-container>
-          <ng-template #login>
-            <a class="btn btn-dark" routerLink="/login">INICIO DE SESION</a>
-          </ng-template>
+            <ng-container *ngIf="bandera; else login">
+                <a class="dropdown-trigger" (click)="toggleDropdown()"> {{nombre}} </a>
+                <div class="dropdown-content" [ngClass]="{'show': dropdownVisible}">
+                    <a (click)="perfil(); toggleDropdown()">Perfil</a>
+                    <a (click)="cerrarSesion()">Cerrar Sesión</a>
+                </div>
+            </ng-container>
+            <ng-template #login>
+                <a class="btn btn-dark" routerLink="/login">INICIO DE SESION</a>
+            </ng-template>
         </div>        
-      </form>
-
+    </form>
     </div>
   </div>
 </nav>

@@ -148,29 +148,24 @@ a{
     outline: none;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1050px) {
+
+    img {
+        display: none;
+    }
     .login-container {
-        height: 90%;
-        width: 80%;
+        max-width: 90%;
+        margin-top: 20%;
     }
 
-    .btn{
-        margin-top: 10px;
+    .input-container {
+        position: relative;
     }
-
-    .social-login {
-        flex-direction: column;
-        align-items: center;
-        height: 30%;
-    }
-
-    .login-info-container > p {
-        margin: 0;
-    }
-
-    @media screen and (max-width: 700px) {
-        img {
-            display: none;
-        }
+    
+    .toggle-password-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
