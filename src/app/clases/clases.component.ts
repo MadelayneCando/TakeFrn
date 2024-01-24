@@ -2,7 +2,6 @@ import { Component, Injector } from '@angular/core';
 import { BackendService } from '../services/backend.service';
 import Swal from 'sweetalert2';
 import { HttpClient } from '@angular/common/http';
-import { remota } from 'src/conexion';
 
 @Component({
   selector: 'app-clases',
@@ -104,18 +103,18 @@ export class ClasesComponent {
     const claseService = this.injector.get(BackendService);
     claseService.crearClase(entrenamientoSeleccionado, instructorSeleccionado,fecha, precio, hora, descrip, cupo ).subscribe((result)=>{
       Swal.fire("Correct", "Se ha creado la clase", "success");      
-      this.cerrarVentanaEmergente();    
+      this.cerrarVentanaEmergente1();    
     },
     (error)=>{
       Swal.fire("Error", "No se ha creado la clase", "error");      
-      this.cerrarVentanaEmergente();    
+      this.cerrarVentanaEmergente1();    
     })
   }
 
   private modificarClases(idclase:number, identrenador:number, identrenamiento:number, cla_fecha:string, cla_preciocreditos: number,
     cla_hora:string, cla_descripcion:string, cla_cupo: number){
       if(idclase && identrenador && identrenamiento && cla_fecha && cla_preciocreditos && cla_hora && cla_descripcion && cla_cupo){
-        const url= remota + "/api/updateClase";
+        const url= "http://localhost:3000/api/updateClase";
         const datos = { 
           p_idclase:idclase,
           p_identrenador:identrenador,
@@ -179,10 +178,17 @@ export class ClasesComponent {
     }
   }
 
-  cerrarVentanaEmergente():void {
+  cerrarVentanaEmergente(): void {
+    const ventanaEmergente = document.getElementById('ventanaEmergente2');
+    if (ventanaEmergente) {
+      ventanaEmergente.style.display = 'none';
+    }
+  }
+
+  cerrarVentanaEmergente1(): void {
     const ventanaEmergente = document.getElementById('ventanaEmergente');
     if (ventanaEmergente) {
-      ventanaEmergente.style.display = 'none'; 
+      ventanaEmergente.style.display = 'none';
     }
   }
 }

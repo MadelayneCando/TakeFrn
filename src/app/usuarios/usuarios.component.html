@@ -1,38 +1,42 @@
 <body>
-<section class="seccion-usuarios">
-  <div class="container"> 
-      <div class="main">
-        <h2><span>M</span>iembros</h2>
-      </div>    
-      <button class="btn price_btn"  routerLink="/perfil">REGRESAR</button>
-      <table id="miTabla">
-          <thead>
-              <tr> 
-                  <th>Cedula</th> 
+  <section class="seccion-usuarios">
+    <div class="container"> 
+        <div class="main">
+          <h2><span>M</span>iembros</h2>
+        </div>    
+        <button class="btn price_btn"  routerLink="/perfil">REGRESAR</button>
+        <div class="table-container">
+          <div class="table-scroll">
+            <table id="miTabla">
+              <thead>
+                <tr>
+                  <th>Cedula</th>
                   <th>Nombre</th>
                   <th>Apellido</th>
-                  <th>Email</th> 
+                  <th>Email</th>
                   <th>Telefono</th>
                   <th>Creditos restantes</th>
                   <th>Estado</th>
                   <th>Acciones</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr *ngFor="let usu of usuarios">
-                <td>{{usu.user_cedula}} </td>
-                <td>{{usu.user_nombre}} </td>
-                <td>{{usu.user_apellido}} </td>
-                <td>{{usu.user_email}} </td>
-                <td>{{usu.user_telefono}} </td>
-                <td>{{usu.user_creditosrestantes}} </td>
-                <td>{{usu.user_estado}} </td>
-                <td>  
-                  <button (click)="cambiaEstadoUsuario(usu.user_email)"><i class="fa-solid fa-clock-rotate-left"></i> Deshabilitar/Habilitar </button>    
-                </td>
-              </tr> 
-          </tbody>           
-      </table>   
-  </div>
-</section>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let usu of usuarios">
+                  <td>{{usu.user_cedula}} </td>
+                  <td>{{usu.user_nombre}} </td>
+                  <td>{{usu.user_apellido}} </td>
+                  <td>{{usu.user_email}} </td>
+                  <td>{{usu.user_telefono}} </td>
+                  <td>{{usu.user_creditosrestantes}} </td>
+                  <td>{{usu.user_estado}} </td>
+                  <td>
+                    <button (click)="cambiaEstadoUsuario(usu.user_email)"><i class="fa-solid fa-clock-rotate-left"></i> Deshabilitar/Habilitar </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+  </section>
 </body>

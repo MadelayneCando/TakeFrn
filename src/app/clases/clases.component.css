@@ -34,7 +34,7 @@ span{
 
 #miTabla {
     width: 100%;
-    border-collapse: collapse;
+    max-width: 100%;
     
 }
 
@@ -82,10 +82,23 @@ span{
     background-color: #f9f9f9;
 }
 
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+}
+
+.container {
+    padding-right: 10px;
+    overflow-x: auto;
+    max-width: 100%;
+    margin-right: 10px; /* Añade un margen derecho para evitar que se salga del body en móviles */
+    box-sizing: border-box; /* Asegura que el margen se incluya en el ancho total */
 }
 
 

@@ -35,11 +35,12 @@
                 <textarea type="text" id="descripcion" name="descripcion" placeholder="Descripción" required [(ngModel)]="descripcion"> </textarea>
                 <br/><br/>
                 <button type="submit" (click)="guardarCita()">Guardar Clase</button>
-                <button  (click)="cerrarVentanaEmergente()">Cancelar</button>
+                <button  (click)="cerrarVentanaEmergente1()">Cancelar</button>
             </form>
         </div>
         </div>
-        <table id="miTabla">
+        <div class="table-container">
+          <table id="miTabla">
             <thead>
                 <tr> 
                     <th>Fecha</th> 
@@ -95,13 +96,14 @@
 
                         <button (click)="actualizar()">Guardar Cambios</button>
                         <button (click)="cerrarVentanaEmergente()">Cancelar</button>
-                        <button (click)="cerrarVentanaEmergente()"> Hola </button>
+                  
                     </div> 
                     <button class="btn btn-outline-danger" (click)="cambiaEstadoClase(clas.idclase)"><i class="fa-solid fa-clock-rotate-left"></i></button>                        
                 </td>
               </tr>
             </tbody> 
         </table>   
+        </div>
     </div>
   </section>
 </body>

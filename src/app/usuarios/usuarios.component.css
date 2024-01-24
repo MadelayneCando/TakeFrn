@@ -4,6 +4,16 @@
     padding-bottom: 20px;
 }
 
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.table-scroll {
+    overflow-x: scroll;
+    width: 100%;
+}
+
 .main h2{
     font-size: 35px;
     position: relative;
@@ -29,12 +39,11 @@ span{
     right: -15px;
     bottom: 0;
     border-radius: 50px;
-
 }
 
 #miTabla {
     width: 100%;
-    border-collapse: collapse;
+    max-width: 100%;
 }
 
 #miTabla th {
@@ -73,7 +82,12 @@ span{
     background-color: rgb(110, 30, 30);
 }
 
-
+.container {
+    overflow-x: auto;
+    max-width: 100%;
+    margin-right: 10px; /* Añade un margen derecho para evitar que se salga del body en móviles */
+    box-sizing: border-box; /* Asegura que el margen se incluya en el ancho total */
+}
 /* Estilos para el contenedor principal */
 .login-records-container {
     margin: 20px;
@@ -122,10 +136,9 @@ body{
     margin-right: 30px; 
     width: 150px;
     color: white;
-    
-  }
-  
-  .price_btn:hover{
+}
+
+.price_btn:hover{
     color: #ffffff;
     background-color: rgb(119, 52, 52);
-  }
+}
