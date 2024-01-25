@@ -2,6 +2,7 @@ import { Component, Injector } from '@angular/core';
 import { BackendService } from '../services/backend.service';
 import Swal from 'sweetalert2';
 import { HttpClient } from '@angular/common/http';
+import { remota } from 'src/conexion';
 
 @Component({
   selector: 'app-clases',
@@ -114,7 +115,7 @@ export class ClasesComponent {
   private modificarClases(idclase:number, identrenador:number, identrenamiento:number, cla_fecha:string, cla_preciocreditos: number,
     cla_hora:string, cla_descripcion:string, cla_cupo: number){
       if(idclase && identrenador && identrenamiento && cla_fecha && cla_preciocreditos && cla_hora && cla_descripcion && cla_cupo){
-        const url= "http://localhost:3000/api/updateClase";
+        const url= remota + "/api/updateClase";
         const datos = { 
           p_idclase:idclase,
           p_identrenador:identrenador,
@@ -153,7 +154,7 @@ export class ClasesComponent {
       this.cerrarVentanaEmergente();
   }
 
-  mostrarVentanaEmergente(idclase: number) {
+mostrarVentanaEmergente(idclase: number) {
     console.log('Idclase:', idclase);
     const registro = this.clases.find(clases => clases.idclase === idclase);
     this.idclase = registro.idclase;
