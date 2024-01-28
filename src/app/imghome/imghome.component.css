@@ -1,3 +1,7 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
 body{
     background-color: #152b3c;
 }
@@ -11,7 +15,6 @@ body{
     font-family: "Figtree", sans-serif; 
     transition: all 400ms;
     padding-bottom: 30px;
-
 }
 
 .box{
@@ -37,13 +40,10 @@ body{
     transform: translateY(60px);
     opacity: 0;
     transition: all 400ms;
-
 }
-
 
 .container:hover .box{
     filter: grayscale(100%) opacity(24%);
-
 }
 
 .box:hover::after{
@@ -59,15 +59,19 @@ body{
 .container:has(.box-1:hover){
     grid-template-columns: 3fr 1fr 1fr 1fr 1fr ;
 }
+
 .container:has(.box-2:hover){
     grid-template-columns: 1fr 3fr 1fr 1fr 1fr ;
 }
+
 .container:has(.box-3:hover){
     grid-template-columns: 1fr 1fr 3fr 1fr 1fr ;
 }
+
 .container:has(.box-4:hover){
     grid-template-columns: 1fr 1fr 1fr 3fr 1fr ;
 }
+
 .container:has(.box-5:hover){
     grid-template-columns: 1fr 1fr 1fr 1fr 3fr ;
 }
@@ -75,15 +79,13 @@ body{
 .box:nth-child(odd){
     transform: translateY(-16px);
 }
+
 .box:nth-child(even){
     transform: translateY(16px);
 }
 
 @media (max-width: 768px) {
     .container {
-      display: none;
+        display: none;
     }
-
-    
-
 }

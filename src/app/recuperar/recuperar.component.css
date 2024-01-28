@@ -1,4 +1,7 @@
 /* Estilos CSS para las imágenes */
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
 
 .pregunta {
     margin-bottom: 20px;

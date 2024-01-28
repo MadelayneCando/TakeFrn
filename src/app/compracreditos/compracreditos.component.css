@@ -1,4 +1,6 @@
-
+*{
+  font-family:Arial, Helvetica, sans-serif;
+}
 
 .main{
     width: 100%;
@@ -35,6 +37,7 @@ span{
     border-radius: 50px;
 
 }
+
 p{
     color: black;
 }
@@ -44,7 +47,6 @@ p{
     font-size: sans-serif;
     font-weight: lighter;
     color: white;
-
 }
 
 /*PRECIOS*/
@@ -76,8 +78,6 @@ p{
 
 }
 
-
-
 .card-container:hover {
   background-color: #5f6f77;
   border-color: #222;
@@ -87,7 +87,6 @@ p{
   width: 100%; 
   text-align: center; 
   height: 250px; 
-
 }
 
 .price_card h4{
@@ -96,7 +95,6 @@ p{
   font-weight: 500;
   color: #ffffff;
 }
-
 
 .price_grid .card h3{
   padding-bottom: 1rem;
@@ -117,14 +115,11 @@ p{
   color: burlywood;
 }
 
-
-
 .price_btn{
   color: brown;
   background-color: transparent;
   border: 2px solid brown;
   height: 50px;
-  
 }
 
 .price_btn:hover{
@@ -139,6 +134,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .rating {
   display: inline-block;
   font-size: 0;
@@ -188,7 +184,6 @@ input:checked ~ label::before {
   transition-delay: calc(0.1 * attr(data-idx integer));
 }
 
-
 /* Estilo para la ventana emergente */
 .ventana-emergente-toggle {
   display: none;
@@ -231,7 +226,6 @@ body {
   cursor: pointer;
   font-size: 16px;
   margin: 0 auto;
-
 }
 
 .boton-enviar:hover {
