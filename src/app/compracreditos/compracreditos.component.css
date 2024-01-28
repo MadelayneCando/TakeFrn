@@ -23,13 +23,13 @@ h3{
 }
 
 span{
-    color: brown;
+    color: #b96e48;
 }
 
 .main h2::before{
     position: absolute;
     content: '';
-    background: brown;
+    background: #b96e48;
     height: 3px;
     width: 30%;
     right: -15px;
@@ -116,15 +116,15 @@ p{
 }
 
 .price_btn{
-  color: brown;
+  color: #b96e48;
   background-color: transparent;
-  border: 2px solid brown;
+  border: 2px solid #b96e48;
   height: 50px;
 }
 
 .price_btn:hover{
   color: #ffffff;
-  background-color: brown;
+  background-color: #b96e48;
 }
 
 body {

@@ -49,7 +49,7 @@ button:hover {
 }
 
 #miTabla th {
-  background-color: brown;
+  background-color: #b96e48;
   color: white;
   padding: 10px;
   text-align: center;
@@ -70,7 +70,7 @@ button:hover {
 }
 
 #miTabla button {
-  background-color: brown;
+  background-color: #b96e48;
   color: white;
   border: none;
   padding: 5px 10px;
@@ -135,13 +135,13 @@ color: black;
 }
 
 span{
-color: brown;
+color: #b96e48;
 }
 
 .main h2::before{
 position: absolute;
 content: '';
-background: brown;
+background: #b96e48;
 height: 3px;
 width: 30%;
 right: -15px;
