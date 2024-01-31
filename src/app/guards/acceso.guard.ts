@@ -10,7 +10,7 @@ export class accesoGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     const bandera = localStorage.getItem('bandera');
-
+    
     if (bandera === 'true') {
       return true;
     } else {
@@ -18,4 +18,6 @@ export class accesoGuard implements CanActivate {
       return false;
     }
   }
+
+  
 }

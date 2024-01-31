@@ -18,7 +18,7 @@ import { InstructoresComponent } from './instructores/instructores.component';
 import { ClasesComponent } from './clases/clases.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 
-const routes: Routes = [
+const routes: Routes = [ 
   {path: 'home', component:HomeComponent},
   {path: 'navbar', component:NavbarComponent},
   {path: 'footer', component:FooterComponent},
@@ -26,13 +26,13 @@ const routes: Routes = [
   {path: 'register', component:RegisterComponent},
   {path:'categorias', component:CategoriasComponent},
   {path: 'equipo', component:EquipoComponent},
-  {path: 'compracreditos', component:CompracreditosComponent},
+  {path: 'compracreditos', component:CompracreditosComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'recuperar', component:RecuperarComponent},
   {path: 'horario', component:HorarioComponent},
-  {path: 'cita', component:CitaComponent},
-  {path: 'instructores', component:InstructoresComponent},
-  {path: 'clases', component:ClasesComponent},
-  {path: 'usuarios', component:UsuariosComponent},
+  {path: 'cita', component:CitaComponent, canActivate:[accesoGuard]}, //AÑADE MADE
+  {path: 'instructores', component:InstructoresComponent, canActivate:[accesoGuard]}, //AÑADE MADE
+  {path: 'clases', component:ClasesComponent, canActivate:[accesoGuard]}, //AÑADE MADE
+  {path: 'usuarios', component:UsuariosComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'perfil', component:PerfilComponent, canActivate:[accesoGuard]},
   {path: '**', pathMatch: 'full',redirectTo:'home'}
 ];
