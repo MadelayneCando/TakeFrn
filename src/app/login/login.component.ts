@@ -62,7 +62,7 @@ export class LoginComponent {
     console.log("Exito");
     })
     .catch(error=>{console.error('Error al iniciar sesion', error)
-    Swal.fire("Error", "credenciales invalidas", "error");
+    Swal.fire("Error", "Credenciales inválidas", "error");
     localStorage.setItem('bandera', "false");
     //localStorage.clear();
   });
