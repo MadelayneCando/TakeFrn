@@ -30,7 +30,7 @@ const routes: Routes = [
   {path: 'recuperar', component:RecuperarComponent},
   {path: 'horario', component:HorarioComponent},
   {path: 'cita', component:CitaComponent, canActivate:[accesoGuard]}, //AÑADE MADE
-  {path: 'instructores', component:InstructoresComponent, canActivate:[accesoGuard]}, //AÑADE MADE
+  {path: 'instructores', component:InstructoresComponent, canActivate:[accesoGuard], data: { tipoGuard: 'tipoActive' }}, //AÑADE MADE
   {path: 'clases', component:ClasesComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'usuarios', component:UsuariosComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'perfil', component:PerfilComponent, canActivate:[accesoGuard]},

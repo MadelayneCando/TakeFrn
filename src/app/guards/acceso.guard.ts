@@ -19,5 +19,14 @@ export class accesoGuard implements CanActivate {
     }
   }
 
+  tipoActive(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    const tipo = localStorage.getItem('idtipo');
+    if(tipo === '2') {
+      return true;
+    }else{
+      this.router.navigate(['/perfil']);
+      return false;
+    }
+  }
   
 }
