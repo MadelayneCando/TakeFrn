@@ -1,6 +1,4 @@
-*{
-    font-family:Arial, Helvetica, sans-serif;
-}
+*{font-family:Arial, Helvetica, sans-serif;}
 header{
     background-image: linear-gradient(
         rgb(0,0,0,0.7),
@@ -30,15 +28,6 @@ section{
 }
 .inicio .image img{
     width: 40vw;
-    animation: float 3s linear infinite;
-}
-@keyframes float{
-    0%, 100%{
-        transform: translateY(0rem);
-    }
-    50%{
-        transform: translateY(-3.5rem);
-    }
 }
 .inicio .content h3{
     font-size: 4rem;
@@ -79,7 +68,6 @@ section{
 }
 .horarioG .image img{
     width: 40vw;
-    animation: float 3s linear infinite;
 }
 .img-logo{
     margin-top: 20px;
