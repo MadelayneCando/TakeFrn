@@ -25,12 +25,12 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'register', component:RegisterComponent},
   {path:'categorias', component:CategoriasComponent},
-  {path: 'equipo', component:EquipoComponent},
-  {path: 'compracreditos', component:CompracreditosComponent, canActivate:[accesoGuard]}, //AÑADE MADE
+  {path: 'equipo', component:EquipoComponent},  
   {path: 'recuperar', component:RecuperarComponent},
   {path: 'horario', component:HorarioComponent},
+  {path: 'compracreditos', component:CompracreditosComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'cita', component:CitaComponent, canActivate:[accesoGuard]}, //AÑADE MADE
-  {path: 'instructores', component:InstructoresComponent, canActivate:[accesoGuard], data: { tipoGuard: 'tipoActive' }}, //AÑADE MADE
+  {path: 'instructores', component:InstructoresComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'clases', component:ClasesComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'usuarios', component:UsuariosComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'perfil', component:PerfilComponent, canActivate:[accesoGuard]},
