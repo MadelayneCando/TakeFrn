@@ -47,7 +47,7 @@
                     <li *ngIf="rol==2"> Direccion: <input id="user_direccion" [readonly]="!editing"
                             [(ngModel)]="direccion"></li>
                     <li> Apellido: <input id="user_apellido" [readonly]="!editing" [(ngModel)]="apellido"></li>
-                    <li *ngIf="rol==2"> Altura: <input id="user_altura" [readonly]="!editing" [(ngModel)]="altura"></li>
+                    <li *ngIf="rol==2"> Altura(m): <input id="user_altura" [readonly]="!editing" [(ngModel)]="altura"></li>
                     <li *ngIf="rol===2"> Creditos: <input id="user_creditosrestantes" [(ngModel)]="creditos" required
                             readonly></li>
 

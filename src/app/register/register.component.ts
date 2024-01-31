@@ -143,7 +143,7 @@ enviarFormulario(){
     this.backend.guardarUsuario(user_cedula, user_nombre, user_apellido, user_email, user_telefono, user_direccion,
       user_peso, user_altura, user_contraseña, preg1, preg2, preg3).subscribe(
         (data: any) => {
-          Swal.fire("Correcto", "Modificado con éxito", "success")
+          Swal.fire("Correcto", "¡Usuario registrado correctamente!", "success")
             .then(() => {
               setTimeout(() => {
                 if (user_email) {

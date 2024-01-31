@@ -29,7 +29,7 @@
 
                 <input type="number" id="peso" name="peso" placeholder="Peso(Kg)" (blur)="setVacio('peso')" required>
 
-                <input type="number" id="altura" name="altura" placeholder="Altura" (blur)="setVacio('altura')"
+                <input type="number" id="altura" name="altura" placeholder="Altura(m)" (blur)="setVacio('altura')"
                     required>
 
                 <input [type]="showPassword ? 'text' : 'password'" id="password" name="password"
@@ -53,15 +53,15 @@
 
                 <header>Preguntas de seguridad</header>
 
-                <input type="text" id="preg1" name="preg1" placeholder="¿Cual es su comida favorita?"
+                <input type="text" id="preg1" name="preg1" placeholder="¿Cuál es su comida favorita?"
                     [(ngModel)]="preg1" (input)="validarCampo('preg1')" [ngClass]="{'invalid': !preg1Valid}" required>
                 <div class="error-message" *ngIf="!preg1Valid">Esta pregunta es obligatoria.</div>
 
-                <input type="text" id="preg2" name="preg2" placeholder="¿Cual es su serie favorita?" [(ngModel)]="preg2"
+                <input type="text" id="preg2" name="preg2" placeholder="¿Cuál es su serie favorita?" [(ngModel)]="preg2"
                     (input)="validarCampo('preg2')" [ngClass]="{'invalid': !preg2Valid}" required>
                 <div class="error-message2" *ngIf="!preg2Valid">Esta pregunta es obligatoria.</div>
 
-                <input type="text" id="preg3" name="preg3" placeholder="¿Cual es su amigo favorito?" [(ngModel)]="preg3"
+                <input type="text" id="preg3" name="preg3" placeholder="¿Cuál es su color favorito?" [(ngModel)]="preg3"
                     (input)="validarCampo('preg3')" [ngClass]="{'invalid': !preg3Valid}" required>
                 <div class="error-message" *ngIf="!preg3Valid">Esta pregunta es obligatoria.</div>
                 <input type="submit" class="button" value="Registrate">

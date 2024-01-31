@@ -2,7 +2,7 @@
     <div class="contenedor-textos">
         <h1>MÁS QUE UN SIMPLE ESTILO DE VIDA</h1>
         <H2>¿QUÉ ESPERAS PARA COMENZAR?</H2>
-        <button class="boton-inicia" routerLink="/categorias">INICIA YA</button>      
+        <button class="boton-inicia" routerLink="/login">INICIA SESIÓN</button>      
     </div>
 </header> 
 <body>
@@ -11,12 +11,34 @@
             <h3>Vive la experencincia <br><span>KICS</span></h3>
             <p>Bienvenido a una experiencia de bienestar 360° que combiana todas 
                 las ultimas tendencias/novedades Fitness. Inscribete y reserva
-                tu plaza con instructor y horario a tu elección.</p>
+                tu plaza con instructor a elección.</p>
+                <button class="boton-inicia" routerLink="/categorias">CATEGORÍAS</button>      
+
         </div>
         <div class="image">
             <img src="assets/img/eje.png" alt="">
         </div>
     </section>
+
+    <!-- NUEVOOOOOOO -->
+    <section class="horarioG" id="horarioG">
+         <div class="image">
+            <img src="assets/img/home1.jpg" alt="">
+        </div>
+        <div class="contentG">
+            <h3>Horarios <br><span>Disponibles</span></h3>
+            <p>Podran encontrar un horario en nuestro sitio, mediante el
+                cuál podras percatarte de las actividades que se realizarán
+                a lo largo del día.
+            </p>
+            <button class="boton-inicia" routerLink="/horario">HORARIOS</button>      
+
+        </div>
+        <!-- <div class="image">
+            <img src="assets/img/home1.jpg" alt="">
+        </div> -->
+    </section>
+
     <app-imghome></app-imghome> 
     <div *ngIf="rol== 0">
         <div id="ventanaEmergente" class="ventana-emergente">

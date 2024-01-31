@@ -12,6 +12,7 @@
     display: inline-block;
     color: black;
 }
+
 .main h6{
     color: black;
 }
@@ -191,7 +192,6 @@ td {
 /* agregado */
 body{
     background-color: #152b3c;
-
 }
 
 .price_btn{
