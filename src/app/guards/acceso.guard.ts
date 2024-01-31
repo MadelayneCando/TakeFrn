@@ -14,21 +14,17 @@ export class accesoGuard implements CanActivate {
 
     if (bandera === 'true') {
       if (tipo === '2') {
-        // Si tipo es 2, permitir el acceso solo a estas rutas
         const allowedRoutesForType2 = ['instructores', 'clases', 'usuarios'];
         if (allowedRoutesForType2.includes(state.url.split('/')[1])) {
           return true;
         } else {
-          // Redirigir a otra ruta si intenta acceder a una ruta no permitida para tipo 2
           this.router.navigate(['/perfil']);
           return false;
         }
       } else {
-        // Permitir el acceso a todas las rutas si tipo no es 2
         return true;
       }
     } else {
-      // Redirigir a la página de inicio de sesión si bandera no es true
       this.router.navigate(['/login']);
       return false;
     }
