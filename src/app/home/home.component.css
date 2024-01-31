@@ -47,7 +47,7 @@ section{
 }
 
 .inicio .content h3{
-    font-size: 4rem;
+    font-size: 5.5rem;
     color: black;
     text-transform: uppercase;
 }
@@ -62,41 +62,7 @@ section{
     color: darkgrey;
     padding: 1rem 0;
 }
-    /* NUEVOOOOO */
-/* nuevo */
-.horarioG{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-}
 
-.horarioG .contentG h3{
-    font-size: 4rem;
-    color: black;
-    text-transform: uppercase;
-    text-align: right;
-}
-
-.horarioG .contentG h3 span{
-    color: #2C3E56;
-    text-transform: uppercase;
-}
-
-.horarioG .contentG p{
-    font-size: 1.7rem;
-    color: darkgrey;
-    padding: 1rem 0;
-    text-align: right;
-}
-
-.horarioG .image img{
-    width: 40vw;
-    animation: float 3s linear infinite;
-}
-
-/* fin nuevo */
 .img-logo{
     margin-top: 20px;
     margin-left: 10px;
@@ -125,7 +91,7 @@ ul{
     border: none;
     border-radius: 50px; 
     cursor: pointer;
-    font-size: 24px;
+    font-size: 16px;
     margin: 0 auto;
 }
 
@@ -134,7 +100,7 @@ ul{
 }
 
 h1{
-    font-size: 5rem;
+    font-size: 7rem;
     text-align: center;
     color: #ffffff;
     margin-bottom: 30px;
@@ -181,7 +147,7 @@ body{
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-bottom: 20px; /* Reduce el espacio inferior */
     }
 
@@ -204,30 +170,11 @@ body{
     }
 
     .inicio .content h3 {
-        font-size: 2.5rem;
-        /* cambie tamaño NUEVOOOO*/
+        font-size: 3rem; /* Ajusta el tamaño del encabezado */
     }
 
     .inicio .content p {
-        font-size: 1.4rem;
-        /* NUEVOOO los 2 de abajo */
-        padding: 20px; 
-        text-align: justify; 
-    }
-
-    .horarioG .contentG h3 {
-        font-size: 2.5rem;
-        /* cambie tamaño NUEVOOOO*/
-    }
-
-    .horarioG .contentG p {
-        font-size: 1.4rem;
-        /* NUEVOOO los 2 de abajo */
-        padding: 20px; 
-        text-align: justify; 
-    }
-    .horarioG .image img {
-        width: 80%; 
+        font-size: 1.4rem; /* Ajusta el tamaño del párrafo */
     }
 }
 
@@ -262,7 +209,7 @@ body{
     }
 
     .inicio .image img {
-        width: 300px; /*NUEVOOOOOO */
+        width: 70%; /* Ajusta el ancho de la imagen */
     }
 
     .inicio .content h3 {
@@ -271,18 +218,6 @@ body{
 
     .inicio .content p {
         font-size: 1.6rem; /* Ajusta el tamaño del párrafo */
-    }
-
-    /* NUEVOOOO */
-    .horarioG .contentG h3 {
-        font-size: 4rem;
-    }
-
-    .horarioG .contentG p {
-        font-size: 1.6rem; /* Ajusta el tamaño del párrafo */
-    }
-    .horarioG .image img {
-        width: 300px; /*NUEVOOOOOO */
     }
 }
 
@@ -327,44 +262,18 @@ body{
         text-align: center;
     }
     
-
-
-    /* NUEVOOOO */
-    @media (min-width: 569px) and (max-width: 1024px) {
+    @media (min-width: 769px) and (max-width: 1024px) {
         .ventana-emergente {
             position: absolute;
             width: 60%;
             height: 60%;
-            
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-        }
-        .image-aviso img {
-            width: 500px;
-
-            
         }
         
         .boton-enviar {
             font-size: 18px;
             padding: 15px 30px; 
-        }
-    }
-
-    @media only screen and (min-width: 375px) and (max-width: 450px) {
-        .contenido-ventana {
-            padding: 10px;
-        }
-    
-        .image-aviso img {
-            width: 100%;
-            max-width: 300px;
-        }
-    }
-
-    @media (max-width: 378px) {
-        .image img {
-            opacity: 0;
-            visibility: hidden;
         }
     }
