@@ -1,7 +1,6 @@
 *{
     font-family:Arial, Helvetica, sans-serif;
 }
-
 header{
     background-image: linear-gradient(
         rgb(0,0,0,0.7),
@@ -15,14 +14,12 @@ header{
     align-items: center;
     justify-content: space-between;
 }
-
 section{
     min-height: 70vh;
     padding: 0 9%;
     padding-top: 7.5rem ;
     padding-bottom: 2rem;
 }
-
 .inicio{
     display: flex;
     align-items: center;
@@ -31,12 +28,10 @@ section{
     background-size: cover;
     background-position: center;
 }
-
 .inicio .image img{
     width: 40vw;
     animation: float 3s linear infinite;
 }
-
 @keyframes float{
     0%, 100%{
         transform: translateY(0rem);
@@ -45,44 +40,64 @@ section{
         transform: translateY(-3.5rem);
     }
 }
-
 .inicio .content h3{
-    font-size: 5.5rem;
+    font-size: 4rem;
     color: black;
     text-transform: uppercase;
 }
-
 .inicio .content h3 span{
     color: #2C3E56;
     text-transform: uppercase;
 }
-
 .inicio .content p{
     font-size: 1.7rem;
     color: darkgrey;
     padding: 1rem 0;
 }
-
+.horarioG{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+.horarioG .contentG h3{
+    font-size: 4rem;
+    color: black;
+    text-transform: uppercase;
+    text-align: right;
+}
+.horarioG .contentG h3 span{
+    color: #2C3E56;
+    text-transform: uppercase;
+}
+.horarioG .contentG p{
+    font-size: 1.7rem;
+    color: darkgrey;
+    padding: 1rem 0;
+    text-align: right;
+}
+.horarioG .image img{
+    width: 40vw;
+    animation: float 3s linear infinite;
+}
 .img-logo{
     margin-top: 20px;
     margin-left: 10px;
     width: 120px;
     height: 120px;
 }
-
 ul{
     list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .contenedor-textos{
     width: 900px;
     height: auto;
     margin: 150px auto;
 }
-
 .boton-inicia {
     display: block;
     padding: 15px 30px;
@@ -91,21 +106,18 @@ ul{
     border: none;
     border-radius: 50px; 
     cursor: pointer;
-    font-size: 16px;
+    font-size: 24px;
     margin: 0 auto;
 }
-
 .boton-inicia:hover {
     background-color: #a00000; 
 }
-
 h1{
-    font-size: 7rem;
+    font-size: 5rem;
     text-align: center;
     color: #ffffff;
     margin-bottom: 30px;
 }
-
 h2{
     font-size: 3rem;
     font-weight: 300;
@@ -113,12 +125,10 @@ h2{
     margin-bottom: 40px;
     color: #ffff;
 }
-
 body{
     width: 100%;
     position: relative;
 }
-
 .boton-cerrar {
     display: block;
     padding: 15px 30px;
@@ -130,113 +140,113 @@ body{
     font-size: 16px;
     margin: 0 auto;
 }
-
 .boton-cerrar:hover {
     background-color: #a00000; 
 }
-
-/* Estilos para pantallas pequeñas (por ejemplo, dispositivos móviles) */
 @media (max-width: 768px) {
     header {
         min-height: 50vh;
     }
-
     .contenedor-textos {
-        width: 90%; /* Aumenta el ancho del contenedor de texto */
-        margin: 50px auto; /* Reduce el margen superior e inferior */
+        width: 90%; 
+        margin: 50px auto; 
     }
-
     h1 {
-        font-size: 4rem;
-        margin-bottom: 20px; /* Reduce el espacio inferior */
+        font-size: 3rem;
+        margin-bottom: 20px; 
     }
-
     h2 {
         font-size: 2.5rem;
-        margin-bottom: 20px; /* Reduce el espacio inferior */
+        margin-bottom: 20px; 
     }
-
     .boton-inicia {
         font-size: 16px;
-        padding: 10px 20px; /* Reduce el tamaño del botón */
+        padding: 10px 20px;
     }
     .boton-cerrar {
         font-size: 16px;
-        padding: 10px 20px; /* Reduce el tamaño del botón */
+        padding: 10px 20px; 
     }
 
     .inicio .image img {
-        width: 80%; /* Aumenta el ancho de la imagen */
+        width: 80%; 
     }
-
     .inicio .content h3 {
-        font-size: 3rem; /* Ajusta el tamaño del encabezado */
+        font-size: 2.5rem;
     }
 
     .inicio .content p {
-        font-size: 1.4rem; /* Ajusta el tamaño del párrafo */
+        font-size: 1.4rem;
+        padding: 20px; 
+        text-align: justify; 
+    }
+    .horarioG .contentG h3 {
+        font-size: 2.5rem;
+    }
+    .horarioG .contentG p {
+        font-size: 1.4rem;
+        padding: 20px; 
+        text-align: justify; 
+    }
+    .horarioG .image img {
+        width: 80%; 
     }
 }
-
-/* Estilos para pantallas medianas (por ejemplo, tabletas) */
 @media (min-width: 769px) and (max-width: 1024px) {
     header {
         min-height: 60vh;
     }
-
     .contenedor-textos {
-        width: 80%; /* Aumenta el ancho del contenedor de texto */
-        margin: 100px auto; /* Reduce el margen superior e inferior */
+        width: 80%; 
+        margin: 100px auto; 
     }
-
     h1 {
         font-size: 5rem;
         margin-bottom: 30px;
     }
-
     h2 {
         font-size: 2.5rem;
         margin-bottom: 30px;
     }
-
     .boton-inicia {
         font-size: 18px;
-        padding: 15px 30px; /* Aumenta el tamaño del botón */
+        padding: 15px 30px; 
     }
     .boton-cerrar {
         font-size: 18px;
-        padding: 15px 30px; /* Aumenta el tamaño del botón */
+        padding: 15px 30px;
     }
-
     .inicio .image img {
-        width: 70%; /* Ajusta el ancho de la imagen */
+        width: 300px; 
     }
-
     .inicio .content h3 {
         font-size: 4rem;
     }
-
     .inicio .content p {
-        font-size: 1.6rem; /* Ajusta el tamaño del párrafo */
+        font-size: 1.6rem; 
+    }
+    .horarioG .contentG h3 {
+        font-size: 4rem;
+    }
+    .horarioG .contentG p {
+        font-size: 1.6rem; 
+    }
+    .horarioG .image img {
+        width: 300px; 
     }
 }
-
-/*modal*/
     .image-aviso img {
-        width: 500px; /* Establece el ancho deseado para la imagen */
+        width: 500px; 
         height: auto;
         margin-bottom: 10px;
     }
-     /* Estilo para la ventana emergente */
     .ventana-emergente-toggle {
         display: none;
     }
-
     body {
         margin: 0;
         font-family: Arial, sans-serif;
     }
-
     .ventana-emergente {
         display: none;
         position: fixed;
@@ -250,30 +260,44 @@ body{
         align-items: center;
         z-index: 1;
     }
-
     .ventana-emergente-toggle:checked + .ventana-emergente {
         display: flex;
     }
-
     .contenido-ventana {
         background-color: #fff;
         padding: 20px;
         border-radius: 5px;
         text-align: center;
     }
-    
-    @media (min-width: 769px) and (max-width: 1024px) {
+    @media (min-width: 569px) and (max-width: 1024px) {
         .ventana-emergente {
             position: absolute;
             width: 60%;
             height: 60%;
-            top: 50%;
+            
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        
+        .image-aviso img {
+            width: 500px;
+        }
         .boton-enviar {
             font-size: 18px;
             padding: 15px 30px; 
+        }
+    }
+    @media only screen and (min-width: 375px) and (max-width: 450px) {
+        .contenido-ventana {
+            padding: 10px;
+        }
+        .image-aviso img {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+    @media (max-width: 378px) {
+        .image img {
+            opacity: 0;
+            visibility: hidden;
         }
     }
