@@ -9,8 +9,7 @@ export class accesoGuard implements CanActivate {
   constructor(private router: Router) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    const bandera = localStorage.getItem('bandera');
-    
+    const bandera = localStorage.getItem('bandera');    
     if (bandera === 'true') {
       return true;
     } else {
