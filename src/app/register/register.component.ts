@@ -1,6 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { BackendService } from '../services/backend.service';
 import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-register',
@@ -11,6 +13,8 @@ export class RegisterComponent {
 
 @ViewChild('password') passwordInput!: ElementRef;
 @ViewChild('confirmpassword') confirmPasswordInput!: ElementRef;
+
+
 
   user_nombre: string = "";
   user_apellido: string = "";
@@ -46,7 +50,7 @@ export class RegisterComponent {
   confirmPasswordVisible: boolean = false;
 
   showPassword = false;
-  showConfirmPassword = false;
+showConfirmPassword = false;
 
 togglePasswordVisibility(field: string) {
   if (field === 'password') {
@@ -54,7 +58,9 @@ togglePasswordVisibility(field: string) {
   } else if (field === 'confirm-password') {
     this.showConfirmPassword = !this.showConfirmPassword;
   }
-} 
+}
+
+  
 
   setVacio(field: string) {
     const inputValue = ((document.getElementById(field) as HTMLInputElement))!.value;
@@ -87,12 +93,16 @@ togglePasswordVisibility(field: string) {
         break;
     }
   }
-    
+  
+  
+  
   validateTelefono() {
     // Verificar que el teléfono tenga exactamente 10 dígitos
     this.telefonoValid = /^\d{10}$/.test(this.user_telefono);
     this.telefonoErrorMessage = this.telefonoValid ? "" : "El teléfono debe tener exactamente 10 dígitos.";
-  }  
+  }
+  
+  
   validatePassword() {
 
     this.confirmPasswordValid = this.user_password === this.user_confirmPassword;
@@ -104,13 +114,14 @@ togglePasswordVisibility(field: string) {
     this.cedulaErrorMessage = this.cedulaValid ? "" : "La cédula debe tener exactamente 10 dígitos numéricos.";
   }
 
+
   validateEmail() {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     this.correoValid = emailPattern.test(this.user_correo);
     this.correoErrorMessage = this.correoValid ? "" : "Ingresa un correo electrónico válido.";
   }
 
-  constructor(private backend: BackendService, private el: ElementRef){}
+  constructor(private backend: BackendService, private el: ElementRef, private router: Router){}
 
 enviarFormulario(){
 
@@ -143,16 +154,13 @@ enviarFormulario(){
     this.backend.guardarUsuario(user_cedula, user_nombre, user_apellido, user_email, user_telefono, user_direccion,
       user_peso, user_altura, user_contraseña, preg1, preg2, preg3).subscribe(
         (data: any) => {
-          Swal.fire("Correcto", "¡Usuario registrado correctamente!", "success")
+          Swal.fire("Correcto", "Usuario registrado correctamente!", "success")
             .then(() => {
               setTimeout(() => {
                 if (user_email) {
                   // Modifica dinámicamente el atributo 'action' del formulario
                   const formulario = document.getElementById('registroForm') as HTMLFormElement;
-                  formulario.action = `https://formsubmit.co/${user_email}`;
-            
-                  // Envía el formulario
-                  formulario.submit();
+                  this.router.navigate(['/login']);
                 } else {
                   // Maneja el caso en el que el campo de correo está vacío
                   console.error('El campo de correo electrónico está vacío');
