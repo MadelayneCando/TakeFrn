@@ -24,7 +24,6 @@
 }   
 
 /*   VENTANA EMERGENTE */
-
 .ventana-emergente {
     display: none;
     position: fixed;
@@ -82,7 +81,8 @@
 body{
     background-color: #152b3c;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    height: 115vh;  /* NUEVOOOOO */
+    padding-top: 0;
 }
 
 /* formualario */
@@ -131,4 +131,13 @@ body{
 
 .button:hover {
     background-color: rgb(109, 32, 32);
+}
+/* NUEVOOOO */
+@media screen and (max-width: 1000px) {
+    .container {
+        padding-top: 17%;
+    }
+    body{
+        height: 135vh;
+    }
 }
