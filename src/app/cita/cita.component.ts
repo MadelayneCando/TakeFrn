@@ -69,12 +69,9 @@ export class CitaComponent implements OnInit{
     console.log(fecha);
     const valorSeleccionado = Number(this.identrenamientoSeleccionado);
     console.log(valorSeleccionado);
-    console.log("HOLA01");
     const claseService = this.injector.get(BackendService);
-    console.log("HOLA");
     claseService.verificarClase(valorSeleccionado, fecha).subscribe(
         (result) => {
-          console.log("CON FE");
             if (Array.isArray(result)) {
                 if (result.length > 0) {
                     for (const clase of result) {

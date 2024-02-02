@@ -55,8 +55,6 @@ export class InstructoresComponent {
     )
   } 
 
-  
-
   private modificarIns(cedula:string, nombre:string, apellido:string, telefono:string, 
     direccion:string, sueldo:number, descripcion:string){
       if(cedula && nombre && apellido && descripcion && telefono && direccion && sueldo){

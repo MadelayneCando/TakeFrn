@@ -17,13 +17,10 @@ export class CategoriasComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute, private changeDetectorRef: ChangeDetectorRef, private injector:Injector) { }
 
-
-
   ngOnInit(): void {
     this.obtenerInstructores();
     this.obtenerEntrenamientos();
   }
-
 
   //INTENTO CON BD
   obtenerInstructores(): void{
