@@ -10,7 +10,7 @@ import { remota } from 'src/conexion';
 })
 export class BackendService {
 
-  private  backendUrl = remota;
+  private  backendUrl = remota; 
   constructor(private http: HttpClient) { }
 
 

@@ -47,7 +47,6 @@ export class NavbarComponent {
   }
   
   perfil(){
-  
     this.router.navigate(['/perfil']);
   }
 
