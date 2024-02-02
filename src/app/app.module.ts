@@ -25,6 +25,7 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ImghomeComponent } from './imghome/imghome.component';
 import { ListaCitasComponent } from './lista-citas/lista-citas.component';
 import { AyudaComponent } from './ayuda/ayuda.component';
+import { ContactanosComponent } from './contactanos/contactanos.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { AyudaComponent } from './ayuda/ayuda.component';
     UsuariosComponent,
     ImghomeComponent,
     ListaCitasComponent,
-    AyudaComponent
+    AyudaComponent,
+    ContactanosComponent
     
   ],
   imports: [
