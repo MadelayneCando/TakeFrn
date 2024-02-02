@@ -17,6 +17,7 @@ import { CitaComponent } from './cita/cita.component';
 import { InstructoresComponent } from './instructores/instructores.component';
 import { ClasesComponent } from './clases/clases.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { AyudaComponent } from './ayuda/ayuda.component';
 
 const routes: Routes = [ 
   {path: 'home', component:HomeComponent},
@@ -34,7 +35,8 @@ const routes: Routes = [
   {path: 'clases', component:ClasesComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'usuarios', component:UsuariosComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'perfil', component:PerfilComponent, canActivate:[accesoGuard]},
-  {path: '**', pathMatch: 'full',redirectTo:'home'}
+  {path: '**', pathMatch: 'full',redirectTo:'home'},
+  {path: 'ayuda', component: AyudaComponent}
 ];
 
 @NgModule({
