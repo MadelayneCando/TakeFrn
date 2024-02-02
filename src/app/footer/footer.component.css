@@ -1,74 +1,71 @@
-*{
-  font-family:Arial, Helvetica, sans-serif;
+footer{
+
+ 
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.logo{
+  height: 80px;
+  margin-bottom: 1rem;
 }
 
-footer{
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+.social-icons-container, .footer-menu-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.social-icon{
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  border: 1px solid #f9fafc;
+  background-image: url(src/assets/img/face.png);
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  margin: 1rem;
 
-  .logo{
-    height: 80px;
-    margin-bottom: 1rem;
-  }
+}
+.social-icon:hover{
+  background-color: #323337;
+  filter: invert(1);
+}
+
+.social-icon:nth-of-type(2){
+  background-image: url(src/assets/img/insta.png);
+}
+
+.footer-menu-container{
+  list-style-type: none;
+  color: #f9fafc;
+  font-size: 18px;
+}
+.menu-item{
+  margin: 1rem 1.5rem;
+  opacity: 0.6;
+}
+.menu-item:hover{
+  opacity: 1;
   
-  .social-icons-container, .footer-menu-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-  }
+}
 
-  .social-icon{
-    height: 60px;
-    width: 60px;
-    border-radius: 50px;
-    border: 1px solid #f9fafc;
-    background-image: url(src/assets/img/face.png);
-    background-position: center;
-    background-size: 40%;
-    background-repeat: no-repeat;
-    margin: 1rem;
-  }
-
-  .social-icon:hover{
-    background-color: #323337;
-    filter: invert(1);
-  }
+.menu-item2{
+  margin: 1rem 1.5rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.menu-item2:hover{
+  opacity: 1;
   
-  .social-icon:nth-of-type(2){
-    background-image: url(src/assets/img/insta.png);
-  }
-  
-  .footer-menu-container{
-    list-style-type: none;
-    color: #f9fafc;
-    font-size: 18px;
-  }
-  .menu-item{
-    margin: 1rem 1.5rem;
-    opacity: 0.6;
-  }
-  .menu-item:hover{
-    opacity: 1; 
-  }
-  
-  .menu-item2{
-    margin: 1rem 1.5rem;
-    cursor: pointer;
-    opacity: 0.6;
-  }
+}
 
-  .menu-item2:hover{
-    opacity: 1;  
-  }
-
-  .copyright{
-    color: #f9fafc;
-    opacity: 0.3;
-    text-align: center;
-  }
+.copyright{
+  color: #f9fafc;
+  opacity: 0.3;
+  text-align: center;
+}

@@ -24,6 +24,7 @@ import { ClasesComponent } from './clases/clases.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ImghomeComponent } from './imghome/imghome.component';
 import { ListaCitasComponent } from './lista-citas/lista-citas.component';
+import { AyudaComponent } from './ayuda/ayuda.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { ListaCitasComponent } from './lista-citas/lista-citas.component';
     ClasesComponent,
     UsuariosComponent,
     ImghomeComponent,
-    ListaCitasComponent
+    ListaCitasComponent,
+    AyudaComponent
     
   ],
   imports: [

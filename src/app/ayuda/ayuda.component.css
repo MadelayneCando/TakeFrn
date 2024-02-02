@@ -1,0 +1,80 @@
+*{font-family:Arial, Helvetica, sans-serif;}
+body{
+    background-color: #152b3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    flex-wrap: wrap; 
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ccc;
+    margin: 10px; /* Espacio entre contenedores, ajusta según tus necesidades */
+    width: 70%;
+    box-sizing: border-box;
+    max-width: 100%; /* Establece el ancho máximo para que no se extienda más allá del 100% */
+    box-sizing: border-box;
+}
+
+
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.steps {
+    text-align: justify;
+}
+
+.step h6 {
+    color: red; /* Agrega el color rojo al texto */
+    display: inline-block;
+}
+
+.step p {
+    display: inline-block;
+    margin-right: 10px; /* Espacio entre elementos, ajusta según tus necesidades */
+    color: red; /* Color de texto inicial */
+    position: relative;
+    transition: color 0.3s, text-decoration 0.3s; /* Agrega transición para suavizar cambios */
+}
+
+.step p::after {
+    content: "\2197"; /* Código Unicode para una flecha diagonal hacia arriba y a la derecha */
+    margin-left: 5px; /* Espacio entre el texto y el icono */
+}
+
+.step p:hover {
+    color: brown; /* Color de texto al pasar el ratón */
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+.step {
+    margin-bottom: 10px;
+}
+.container.show-details {
+    display: block;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        height: 90%;
+    }
+    
+    .container{
+        margin-top: 10px;
+        margin: 10px;
+        margin-bottom: 10px;
+    }
+}

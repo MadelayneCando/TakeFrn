@@ -14,28 +14,26 @@ export class accesoGuard implements CanActivate {
     
     if (bandera === 'true') {
       if (tipo === '1') {
-        // Si bandera es true y tipo es 1, permitir el acceso a ciertas rutas
+        // bandera true y tipo = 1
         const allowedRoutesForType1 = ['clases', 'instructores', 'perfil', 'usuarios'];
         if (allowedRoutesForType1.includes(state.url.split('/')[1])) {
           return true;
         } else {
-          // Redirigir a otra ruta si intenta acceder a una ruta no permitida para tipo 1
-          this.router.navigate(['/perfil']); // Puedes ajustar la ruta de redirección según tus necesidades
+          this.router.navigate(['/perfil']); 
           return false;
         }
       } else {
-        // Si bandera es true y tipo no es 1, permitir el acceso solo a compracreditos y perfil
+        // bandera= true y tipo != 1
         const allowedRoutesForTypeNot1 = ['compracreditos', 'perfil'];
         if (allowedRoutesForTypeNot1.includes(state.url.split('/')[1])) {
           return true;
         } else {
-          // Redirigir a otra ruta si intenta acceder a una ruta no permitida para tipo no 1
-          this.router.navigate(['/perfil']); // Puedes ajustar la ruta de redirección según tus necesidades
+          this.router.navigate(['/perfil']); 
           return false;
         }
       }
     } else {
-      // Redirigir a la página de inicio de sesión si bandera no es true
+      // bandera =false
       this.router.navigate(['/login']);
       return false;
     }
