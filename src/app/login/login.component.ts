@@ -36,8 +36,8 @@ export class LoginComponent {
 
   inicioSesion(){
     console.log("...");
-    const url = remota + '/api/validarcorreo'; 
-    const datos = {
+    const url = remota + '/api/validateEmailSt'; 
+    const datos = { 
       user_email: (<HTMLInputElement>document.querySelector('#user_email')).value,
       user_contraseña: (<HTMLInputElement>document.querySelector('#user_contraseña')).value
     } 
