@@ -18,6 +18,7 @@ import { InstructoresComponent } from './instructores/instructores.component';
 import { ClasesComponent } from './clases/clases.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { AyudaComponent } from './ayuda/ayuda.component';
+import { ContactanosComponent } from './contactanos/contactanos.component';
 
 const routes: Routes = [ 
   {path: 'home', component:HomeComponent},
@@ -30,7 +31,7 @@ const routes: Routes = [
   {path: 'recuperar', component:RecuperarComponent},
   {path: 'horario', component:HorarioComponent},
   {path: 'ayuda', component: AyudaComponent},
-  {path: 'contactanos', component: AyudaComponent},
+  {path: 'contactanos', component: ContactanosComponent},
   {path: 'compracreditos', component:CompracreditosComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'cita', component:CitaComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'instructores', component:InstructoresComponent, canActivate:[accesoGuard]}, //AÑADE MADE
