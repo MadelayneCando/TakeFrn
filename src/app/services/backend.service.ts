@@ -5,7 +5,7 @@ import axios from 'axios';
 import { remota } from 'src/conexion';
 
 
-@Injectable({
+@Injectable({ 
   providedIn: 'root'
 })
 export class BackendService {
@@ -244,7 +244,7 @@ export class BackendService {
   obtenerClaseSemanales(): Observable<any[]> {
     return new Observable<any[]>((observer) => {
       axios
-        .get(`${this.backendUrl}/api/getClassSecret`, {})
+        .get(`${this.backendUrl}/api/getClassSecretSemal`, {})
         .then((response) => {
           //console.log(response.data); ajam eso no e xd
           observer.next(response.data);
