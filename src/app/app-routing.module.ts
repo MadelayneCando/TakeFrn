@@ -30,6 +30,7 @@ const routes: Routes = [
   {path: 'recuperar', component:RecuperarComponent},
   {path: 'horario', component:HorarioComponent},
   {path: 'ayuda', component: AyudaComponent},
+  {path: 'contactanos', component: AyudaComponent},
   {path: 'compracreditos', component:CompracreditosComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'cita', component:CitaComponent, canActivate:[accesoGuard]}, //AÑADE MADE
   {path: 'instructores', component:InstructoresComponent, canActivate:[accesoGuard]}, //AÑADE MADE
