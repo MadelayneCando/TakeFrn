@@ -1,8 +1,9 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild , Injector } from '@angular/core';
 import axios from 'axios';
 import Swal from 'sweetalert2';  
 import { remota } from 'src/conexion';
 import { Router } from '@angular/router';
+import { BackendService } from '../services/backend.service';
 
 @Component({
   selector: 'app-login',
@@ -32,10 +33,12 @@ export class LoginComponent {
   mostrarPag=true;
 
 
-  constructor(private router:Router){}
+  constructor(private router:Router, private injector: Injector){}
 
   inicioSesion(){
     console.log("...");
+    const loginService = this.injector.get(BackendService);
+
     const url = remota + '/api/validateEmailSt'; 
     const datos = { 
       user_email: (<HTMLInputElement>document.querySelector('#user_email')).value,
@@ -57,9 +60,8 @@ export class LoginComponent {
     localStorage.setItem('idusuario', response.data.usuario.idusuario);
     localStorage.setItem('bandera', "true");
     window.location.href='/perfil';
-    // this.router.navigate(['/perfil']);
     
-    console.log("Exito");
+    console.log("Éxito");
     })
     .catch(error=>{console.error('Error al iniciar sesion', error)
     Swal.fire("Error", "Credenciales inválidas", "error");

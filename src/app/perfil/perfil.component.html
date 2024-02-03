@@ -9,11 +9,9 @@
     <div class="perfil-usuario">
         <div class="perfil-usuario-bio">
             <h3 class="titulo">{{nombre}} {{apellido}}</h3>
-
-
         </div>
         <div class="botonesperfil">
-            <button class="price_btn" (click)="toggleEditing()" *ngIf="rol===2">{{ editing ? 'Guardar' : 'MODIFICAR'
+            <button class="price_btn" (click)="toggleEditing()" *ngIf="rol===2">{{ editing ? 'GUARDAR' : 'MODIFICAR'
                 }}</button>
             <button class="price_btn" routerLink="/compracreditos" *ngIf="rol===2">COMPRA CREDITOS</button>
             <!-- ESTOY CAMBIANDO ESTO - MD - No se porq el metodo funciona contrario, pero x, mostrarAgenda muestra la tabla y el mostrar Tabla no muestra nada xd -->
@@ -50,11 +48,9 @@
                     <li *ngIf="rol==2"> Altura(m): <input id="user_altura" [readonly]="!editing" [(ngModel)]="altura"></li>
                     <li *ngIf="rol===2"> Creditos: <input id="user_creditosrestantes" [(ngModel)]="creditos" required
                             readonly></li>
-
                 </ul>
             </div>
         </div>
-
 
         <div *ngIf="!mostrarPerfil">
             <app-cita *ngIf="mostrarFormularioAgendarCita"></app-cita> <!-- ESTOY CAMBIANDO ESTO - MD -->
