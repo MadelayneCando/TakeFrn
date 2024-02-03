@@ -56,7 +56,13 @@ export class LoginComponent {
     localStorage.setItem('user_estado', response.data.usuario.user_estado);
     localStorage.setItem('user_creditos', response.data.usuario.user_creditosrestantes);
     localStorage.setItem('user_foto', response.data.usuario.user_foto);
-    localStorage.setItem('idtipo', response.data.usuario.idtipo);
+    const rol = response.data.usuario.idtipo;
+    if(rol == 1){
+      localStorage.setItem('idtipo', '15');
+    }else{
+      localStorage.setItem('idtipo', '67');
+    }
+    //localStorage.setItem('idtipo', response.data.usuario.idtipo);
     localStorage.setItem('idusuario', response.data.usuario.idusuario);
     localStorage.setItem('bandera', "true");
     window.location.href='/perfil';

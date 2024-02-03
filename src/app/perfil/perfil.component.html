@@ -11,42 +11,42 @@
             <h3 class="titulo">{{nombre}} {{apellido}}</h3>
         </div>
         <div class="botonesperfil">
-            <button class="price_btn" (click)="toggleEditing()" *ngIf="rol===2">{{ editing ? 'GUARDAR' : 'MODIFICAR'
+            <button class="price_btn" (click)="toggleEditing()" *ngIf="rol===67">{{ editing ? 'GUARDAR' : 'MODIFICAR'
                 }}</button>
-            <button class="price_btn" routerLink="/compracreditos" *ngIf="rol===2">COMPRA CREDITOS</button>
+            <button class="price_btn" routerLink="/compracreditos" *ngIf="rol===67">COMPRA CREDITOS</button>
             <!-- ESTOY CAMBIANDO ESTO - MD - No se porq el metodo funciona contrario, pero x, mostrarAgenda muestra la tabla y el mostrar Tabla no muestra nada xd -->
-            <button class="price_btn" (click)="mostrarCita()" *ngIf="rol===2">MOSTRAR CITA</button>
+            <button class="price_btn" (click)="mostrarCita()" *ngIf="rol===67">MOSTRAR CITA</button>
             <!-- ESTOY CAMBIANDO ESTO - MD -->
-            <button class="price_btn" *ngIf="rol===2" (click)="agendarCita()">AGENDAR CITAS</button>
-            <button class="price_btn" *ngIf="rol===2" (click)="RELOAD()">DATOS PERSONALES</button>
+            <button class="price_btn" *ngIf="rol===67" (click)="agendarCita()">AGENDAR CITAS</button>
+            <button class="price_btn" *ngIf="rol===67" (click)="RELOAD()">DATOS PERSONALES</button>
             <!--ESTOY CAMBIANDO ESTO - MD -->
 
 
         </div>
 
         <div class="botonesadmi">
-            <label for="btn-modal" class="lbl-modal" *ngIf="rol===1">Informacion</label>
-            <label for="btn-modal" class="lbl-modal" routerLink="/instructores" *ngIf="rol===1">INSTRUCTORES</label>
-            <label for="btn-modal" class="lbl-modal" routerLink="/clases" *ngIf="rol===1">CLASES</label>
-            <label for="btn-modal" class="lbl-modal" routerLink="/usuarios" *ngIf="rol===1">USUARIOS</label>
+            <label for="btn-modal" class="lbl-modal" *ngIf="rol===15">Informacion</label>
+            <label for="btn-modal" class="lbl-modal" routerLink="/instructores" *ngIf="rol===15">INSTRUCTORES</label>
+            <label for="btn-modal" class="lbl-modal" routerLink="/clases" *ngIf="rol===15">CLASES</label>
+            <label for="btn-modal" class="lbl-modal" routerLink="/usuarios" *ngIf="rol===15">USUARIOS</label>
         </div>
 
         <div *ngIf="mostrarPerfil"> <!-- ESTOY CAMBIANDO ESTO - MD  ngif aquie mortrar perfil es TRUE -->
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
-                    <li *ngIf="rol==2"> Cedula: <input id="user_cedula" [readonly]="!editing" [(ngModel)]="cedula"></li>
-                    <li *ngIf="rol==2"> Peso(Kg): <input id="user_peso" [readonly]="!editing" [(ngModel)]="peso"></li>
+                    <li *ngIf="rol==67"> Cedula: <input id="user_cedula" [readonly]="!editing" [(ngModel)]="cedula"></li>
+                    <li *ngIf="rol==67"> Peso(Kg): <input id="user_peso" [readonly]="!editing" [(ngModel)]="peso"></li>
                     <li> Nombre: <input id="user_nombre" [readonly]="!editing" [(ngModel)]="nombre"></li>
-                    <li *ngIf="rol==2"> Email: <input id="user_email" [readonly]="!editing" [(ngModel)]="email"></li>
-                    <li *ngIf="rol==2"> Telefono: <input id="user_telefono" [readonly]="!editing"
+                    <li *ngIf="rol==67"> Email: <input id="user_email" [readonly]="!editing" [(ngModel)]="email"></li>
+                    <li *ngIf="rol==67"> Telefono: <input id="user_telefono" [readonly]="!editing"
                             [(ngModel)]="telefono"></li>
                 </ul>
                 <ul class="lista-datos">
-                    <li *ngIf="rol==2"> Direccion: <input id="user_direccion" [readonly]="!editing"
+                    <li *ngIf="rol==67"> Direccion: <input id="user_direccion" [readonly]="!editing"
                             [(ngModel)]="direccion"></li>
                     <li> Apellido: <input id="user_apellido" [readonly]="!editing" [(ngModel)]="apellido"></li>
-                    <li *ngIf="rol==2"> Altura(m): <input id="user_altura" [readonly]="!editing" [(ngModel)]="altura"></li>
-                    <li *ngIf="rol===2"> Creditos: <input id="user_creditosrestantes" [(ngModel)]="creditos" required
+                    <li *ngIf="rol==67"> Altura(m): <input id="user_altura" [readonly]="!editing" [(ngModel)]="altura"></li>
+                    <li *ngIf="rol===67"> Creditos: <input id="user_creditosrestantes" [(ngModel)]="creditos" required
                             readonly></li>
                 </ul>
             </div>
