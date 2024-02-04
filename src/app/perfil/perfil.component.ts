@@ -91,7 +91,7 @@ export class PerfilComponent {
       this.foto = fotoLocal;
     } else {
       this.cedula = 'undefined';
-      this.nombre = 'undefined';
+      this.nombre = 'undefined'; 
       this.apellido = 'undefined';
       this.email = 'undefined';
       this.telefono = 'undefined';

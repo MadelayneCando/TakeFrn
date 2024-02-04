@@ -59,7 +59,7 @@ export class LoginComponent {
     const rol = response.data.usuario.idtipo;
     if(rol == 1){
       localStorage.setItem('idtipo', '15');
-    }else{
+    } if(rol == 2){
       localStorage.setItem('idtipo', '67');
     }
     //localStorage.setItem('idtipo', response.data.usuario.idtipo);

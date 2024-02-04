@@ -13,7 +13,7 @@ export class accesoGuard implements CanActivate {
     const tipo = localStorage.getItem('idtipo');
     
     if (bandera === 'true') {
-      if (tipo === '1') {
+      if (tipo === '15') {
         // bandera true y tipo = 1
         const allowedRoutesForType1 = ['clases', 'instructores', 'perfil', 'usuarios'];
         if (allowedRoutesForType1.includes(state.url.split('/')[1])) {
