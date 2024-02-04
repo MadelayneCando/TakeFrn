@@ -57,6 +57,7 @@ export class CompracreditosComponent implements OnInit {
       console.error(error);
     })
     this.cerrarVentanaEmergente();
+    this.router.navigateByUrl('/perfil');
   }
 
   verPuntuaje(nombreP: string){
@@ -95,7 +96,7 @@ export class CompracreditosComponent implements OnInit {
         // Realiza la compra solo si el usuario confirma
         creditoServices.comprarCreditos(idusuario, idcreditos).subscribe((result) => {
       
-          Swal.fire('Compra realizada!', 'Tu compra ha sido procesada correctamente.', 'success');
+          Swal.fire('¡Compra realizada!', 'Tu compra ha sido procesada correctamente.', 'success');
           setTimeout(function () {
             window.location.href='/perfil';}, 90000);
             if(idcreditos===2){
@@ -113,7 +114,7 @@ export class CompracreditosComponent implements OnInit {
             }
         }, (error) => {
           console.error(error);
-          Swal.fire('Error', 'Hubo un problema al procesar la compra.', 'error');
+          Swal.fire('Error', 'Hubo un problema al procesar la compra. Por favorr, vuelve a intentar más tarde', 'error');
         });
       } else {
         Swal.fire('Compra cancelada', 'Tu compra ha sido cancelada.', 'error');
