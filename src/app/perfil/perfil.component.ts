@@ -137,10 +137,10 @@ export class PerfilComponent {
     this.backend.modificarUsuario(user_email, user_cedula, user_nombre, user_apellido, user_telefono, user_direccion,
       user_peso, user_altura).subscribe(
       (data: any) => {
-        Swal.fire('Datos Modificados!', 'Tus datos se han modificado correctamente.', 'success');
+        Swal.fire('¡Datos Modificados!', 'Tus datos se han modificado correctamente.', 'success');
       },
       (error: any) => {
-        Swal.fire('Datos NO Modificados!', 'Tus datos no se han modificado.', 'error');
+        Swal.fire('¡Datos NO Modificados!', 'Los datos que deseas modificar no son posibles.', 'error');
       }
     );
   }
