@@ -103,7 +103,7 @@ export class ClasesComponent {
     const cupo = Number(this.cupos);
     const claseService = this.injector.get(BackendService);
     claseService.crearClase(entrenamientoSeleccionado, instructorSeleccionado,fecha, precio, hora, descrip, cupo ).subscribe((result)=>{
-      Swal.fire("Correct", "Se ha creado la clase", "success");      
+      Swal.fire("¡Correcto!", "Se ha creado la clase", "success");      
       this.cerrarVentanaEmergente1();    
     },
     (error)=>{
@@ -115,7 +115,7 @@ export class ClasesComponent {
   private modificarClases(idclase:number, identrenador:number, identrenamiento:number, cla_fecha:string, cla_preciocreditos: number,
     cla_hora:string, cla_descripcion:string, cla_cupo: number){
       if(idclase && identrenador && identrenamiento && cla_fecha && cla_preciocreditos && cla_hora && cla_descripcion && cla_cupo){
-        const url= remota + "/api/updateClase";
+        const url= remota + "/api/updateClassSect";
         const datos = { 
           p_idclase:idclase,
           p_identrenador:identrenador,
@@ -138,7 +138,7 @@ export class ClasesComponent {
             clases.cla_hora=cla_hora,
             clases.cla_descripcion=cla_descripcion,
             clases.cla_cupo=cla_cupo
-            console.log("cambios realizados");
+            console.log("Cambios realizados");
           },
           (error)=>{
             Swal.fire("error", "No ha sido modificado", "error");
@@ -150,7 +150,7 @@ export class ClasesComponent {
   actualizar(){
     this.modificarClases(this.idclase, this.identrenador, this.identrenamiento, this.fecha, this.precred, this.cla_hora,
       this.cla_descrip, this.cla_cupo);
-      Swal.fire("Correcto", "Modificado con exito", "success");
+      Swal.fire("Correcto", "Clase modificada con éxito", "success");
       this.cerrarVentanaEmergente();
   }
 

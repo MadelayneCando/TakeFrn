@@ -79,7 +79,7 @@ export class InstructoresComponent {
             entrenador.en_direccion=direccion,
             entrenador.en_sueldo=sueldo,
             entrenador.en_descripcion=descripcion;
-            console.log("cambios realizados");
+            console.log("Cambios realizados");
           },
           (error)=>{
             Swal.fire("error", "No ha sido modificado", "error");
@@ -91,7 +91,7 @@ export class InstructoresComponent {
   actualizar(){
     this.modificarIns(this.cedula, this.nombre, this.apellido, 
       this.telefono, this.direccion, this.sueldo, this.descripcion);
-      Swal.fire("Correcto", "Modificado con exito", "success");
+      Swal.fire("Correcto", "Datos del instructor mModificados con éxito", "success");
       this.cerrarVentanaEmergente();
   }
 

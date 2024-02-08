@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <div class="container">
         <div class="registration form">
-            <header>Registrate</header>
+            <header>Regístrate</header>
             <form id="registroForm" action="#" (submit)="enviarFormulario()" method="POST">
                 <input type="text" id="cedula" name="cedula" placeholder="Cedula" [(ngModel)]="user_cedula"
                     (input)="validateCedula()" [ngClass]="{'invalid': !cedulaValid}" required>
@@ -68,7 +68,7 @@
             </form>
 
             <div class="signup">
-                <span class="signup">Ya tienes una cuenta?
+                <span class="signup">¿Ya tienes una cuenta?
                     <a routerLink="/login">Inicia Sesion</a>
                 </span>
             </div>

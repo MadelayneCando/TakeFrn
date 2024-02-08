@@ -20,12 +20,10 @@
             <button class="price_btn" *ngIf="rol===67" (click)="agendarCita()">AGENDAR CITAS</button>
             <button class="price_btn" *ngIf="rol===67" (click)="RELOAD()">DATOS PERSONALES</button>
             <!--ESTOY CAMBIANDO ESTO - MD -->
-
-
         </div>
 
         <div class="botonesadmi">
-            <label for="btn-modal" class="lbl-modal" *ngIf="rol===15">Informacion</label>
+            <label for="btn-modal" class="lbl-modal" *ngIf="rol===15">Información</label>
             <label for="btn-modal" class="lbl-modal" routerLink="/instructores" *ngIf="rol===15">INSTRUCTORES</label>
             <label for="btn-modal" class="lbl-modal" routerLink="/clases" *ngIf="rol===15">CLASES</label>
             <label for="btn-modal" class="lbl-modal" routerLink="/usuarios" *ngIf="rol===15">USUARIOS</label>
@@ -34,19 +32,19 @@
         <div *ngIf="mostrarPerfil"> <!-- ESTOY CAMBIANDO ESTO - MD  ngif aquie mortrar perfil es TRUE -->
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
-                    <li *ngIf="rol==67"> Cedula: <input id="user_cedula" [readonly]="!editing" [(ngModel)]="cedula"></li>
+                    <li *ngIf="rol==67"> Cédula: <input id="user_cedula" [readonly]="!editing" [(ngModel)]="cedula"></li>
                     <li *ngIf="rol==67"> Peso(Kg): <input id="user_peso" [readonly]="!editing" [(ngModel)]="peso"></li>
                     <li> Nombre: <input id="user_nombre" [readonly]="!editing" [(ngModel)]="nombre"></li>
                     <li *ngIf="rol==67"> Email: <input id="user_email" [readonly]="!editing" [(ngModel)]="email"></li>
-                    <li *ngIf="rol==67"> Telefono: <input id="user_telefono" [readonly]="!editing"
+                    <li *ngIf="rol==67"> Teléfono: <input id="user_telefono" [readonly]="!editing"
                             [(ngModel)]="telefono"></li>
                 </ul>
                 <ul class="lista-datos">
-                    <li *ngIf="rol==67"> Direccion: <input id="user_direccion" [readonly]="!editing"
+                    <li *ngIf="rol==67"> Dirección: <input id="user_direccion" [readonly]="!editing"
                             [(ngModel)]="direccion"></li>
                     <li> Apellido: <input id="user_apellido" [readonly]="!editing" [(ngModel)]="apellido"></li>
                     <li *ngIf="rol==67"> Altura(m): <input id="user_altura" [readonly]="!editing" [(ngModel)]="altura"></li>
-                    <li *ngIf="rol===67"> Creditos: <input id="user_creditosrestantes" [(ngModel)]="creditos" required
+                    <li *ngIf="rol===67"> Créditos: <input id="user_creditosrestantes" [(ngModel)]="creditos" required
                             readonly></li>
                 </ul>
             </div>

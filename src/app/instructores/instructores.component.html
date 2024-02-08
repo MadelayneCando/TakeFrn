@@ -36,13 +36,13 @@
                   <button class="btn btn-outline-primary"  style="margin-right: 10px;" (click)="mostrarVentanaEmergente(ins.en_cedula)"><i class="fa-solid fa-pen-to-square"></i></button>
                     <div id="ventanaEmergente" class="ventana-emergente">
                         <h3>Editar Registro</h3>
-                        <label>Cedula: <input type="text" [(ngModel)]="cedula" readonly></label>
+                        <label>Cédula: <input type="text" [(ngModel)]="cedula" readonly></label>
                         <label>Nombre: <input type="text" [(ngModel)]="nombre" ></label>
                         <label>Apellido: <input type="text" [(ngModel)]="apellido" ></label>
-                        <label>Direccion: <input type="text" [(ngModel)]="direccion"></label>
-                        <label>Telefono: <input type="text" [(ngModel)]="telefono"></label>
+                        <label>Dirección: <input type="text" [(ngModel)]="direccion"></label>
+                        <label>Teléfono: <input type="text" [(ngModel)]="telefono"></label>
                         <label>Sueldo: <input type="text" [(ngModel)]="sueldo" ></label>
-                        <label>Descripcion: <input type="text" [(ngModel)]="descripcion"></label>
+                        <label>Descripción: <input type="text" [(ngModel)]="descripcion"></label>
                         <button (click)="actualizar()">Guardar Cambios</button>
                         <button (click)="cerrarVentanaEmergente()">Cancelar</button>
                     </div>   

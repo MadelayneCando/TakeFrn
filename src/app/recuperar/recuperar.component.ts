@@ -38,7 +38,7 @@ export class RecuperarComponent {
     },
     (error)=>{
       console.error(error);
-      Swal.fire("Error", "No Se recuperó", "error");
+      Swal.fire("Error", "Las respuestas no coinciden, por favor inténtelo de nuevo.", "error");
     } 
     )    
   }
@@ -55,14 +55,14 @@ export class RecuperarComponent {
     console.log(email, clave);
     const cambiarService = this.injector.get(BackendService);
     cambiarService.cambioClave(email, clave).subscribe((result)=>{      
-      Swal.fire("Correcto", "Se recuperó", "success"); 
+      Swal.fire("Correcto", "Se recuperó su cuenta.", "success"); 
       setTimeout(function () {
         location.reload(); // Esto recargará la página después de 1 segundo
     }, 1000);
     },
     (error)=>{
       console.error(error);
-      Swal.fire("Error", "No Se recuperó", "error");
+      Swal.fire("Error", "Verifique las contraseñas ingresadas", "error");
     }
     
     )   

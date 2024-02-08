@@ -33,13 +33,13 @@ export class UsuariosComponent {
     console.log(user_email);
     const estadoService = this.injector.get(BackendService);
     estadoService.modificarUsuarioEstado(user_email).subscribe((result)=>{
-      Swal.fire("Cambio", "Se ha cambiado el estado del usuario", "success").then((result)=>{
+      Swal.fire("¡Cambio de Estado!", "Se ha cambiado el estado del usuario", "success").then((result)=>{
         location.reload();
       });      
     },
     (error)=>{
       console.error(error); 
-      Swal.fire("Error", "No se ha cambiado el estado del usuario", "error")
+      Swal.fire("¡Error!", "No se ha logrado cambiar el estado del usuario, por favor inténtelo nuevamente", "error")
     } 
     )
   }

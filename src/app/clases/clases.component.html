@@ -31,7 +31,7 @@
                 <label for="cupo">Cupo:</label>
                 <input type="number" id="cupo" name="cupo" placeholder="Número de cupo" required [(ngModel)]="cupos">
       
-                <label for="descripcion">Descripcion: </label> 
+                <label for="descripcion">Descripción: </label> 
                 <textarea type="text" id="descripcion" name="descripcion" placeholder="Descripción" required [(ngModel)]="descripcion"> </textarea>
                 <br/><br/>
                 <button type="submit" (click)="guardarCita()">Guardar Clase</button>
@@ -45,10 +45,10 @@
                 <tr> 
                     <th>Fecha</th> 
                     <th>Entrenamiento</th>
-                    <th>Entrenador</th>
+                    <th>Instructor</th>
                     <th>Precios creditos</th>
                     <th>Hora</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                     <th>Cupo</th>
                     <th>Estado</th>
                     <th>Acciones</th>
@@ -76,19 +76,19 @@
                             <option *ngFor="let ent of entrenamientos" [value]="ent.identrenamiento"> {{ent.ent_nombre}} </option>
                         </select>
                         
-                        <label for="entrenador">Entrenador:</label>                    
+                        <label for="entrenador">Instructor:</label>                    
                         <select id="identrenador" name="identrenador" required [(ngModel)]="identrenador">
-                            <option value="">Selecciona un entrenador</option>
+                            <option value="">Selecciona un instructor</option>
                             <option *ngFor="let inst of instructores" [value]="inst.identrenador"> {{inst.en_nombre}} {{inst.en_apellido}} </option>
                         </select>
 
-                        <label for="precred">Precios creditos: 
+                        <label for="precred">Precio créditos: 
                         <input type="number" [(ngModel)]="precred"></label>
 
                         <label for="cla_hora">Hora: 
                         <input type="time" [(ngModel)]="cla_hora"></label>
                         
-                        <label for="cla_descrip">Descripcion: 
+                        <label for="cla_descrip">Descripción: 
                         <input type="text" [(ngModel)]="cla_descrip" ></label>
                         
                         <label for="cla_cupo">Cupo: 
